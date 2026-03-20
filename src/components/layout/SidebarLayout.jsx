@@ -11,7 +11,7 @@ export default function SidebarLayout() {
   return (
     <>
       <SearchDialog />
-      <div className="flex min-h-screen pt-16">
+      <div className="flex min-h-screen pt-16 bg-bg text-text-primary">
         {/* Desktop sidebar */}
         <aside className="hidden md:block fixed top-16 left-0 bottom-0 w-64 bg-bg overflow-y-auto">
           <Sidebar />

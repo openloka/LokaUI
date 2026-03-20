@@ -1,4 +1,3 @@
-import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Showcase from '../components/Showcase'
 import Marquee from '../components/Marquee'
@@ -9,8 +8,7 @@ import Footer from '../components/Footer'
 
 export default function LandingPage() {
   return (
-    <>
-      <Header />
+    <div className="min-h-screen bg-bg text-text-primary">
       <Hero />
       <Showcase />
       <Marquee />
@@ -18,6 +16,6 @@ export default function LandingPage() {
       <ComponentBrowser />
       <CtaSection />
       <Footer />
-    </>
+    </div>
   )
 }

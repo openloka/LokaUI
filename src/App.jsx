@@ -1,10 +1,12 @@
 import { lazy, Suspense, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Providers from './components/layout/Providers'
+import Header from './components/Header'
 
 const LandingPage = lazy(() => import('./pages/LandingPage'))
 const SidebarLayout = lazy(() => import('./components/layout/SidebarLayout'))
 const CategoryPage = lazy(() => import('./pages/CategoryPage'))
+const DocsPage = lazy(() => import('./pages/DocsPage'))
 const FavoritesPage = lazy(() => import('./pages/FavoritesPage'))
 
 function ScrollAnimator({ children }) {
@@ -37,12 +39,13 @@ function ScrollAnimator({ children }) {
 function AppRoutes() {
   return (
     <ScrollAnimator>
+      <Header />
       <Suspense fallback={<div className="min-h-screen bg-bg" />}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route element={<SidebarLayout />}>
             <Route path="/favorites" element={<FavoritesPage />} />
-            <Route path="/docs/:slug" element={<CategoryPage />} />
+            <Route path="/docs/:slug" element={<DocsPage />} />
             <Route path="/:category/:component" element={<CategoryPage />} />
           </Route>
         </Routes>
