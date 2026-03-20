@@ -10,6 +10,7 @@ function Checkbox({ label, defaultChecked = false }) {
       gap: 8,
       cursor: 'pointer',
       fontSize: 12,
+      minHeight: 44,
       color: checked ? 'var(--text-tertiary)' : 'var(--text-secondary)',
       textDecoration: checked ? 'line-through' : 'none',
       transition: 'color 0.2s ease',

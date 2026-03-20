@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
 
         {/* Links */}
-        <nav className="flex gap-6">
+        <nav className="flex gap-3 sm:gap-6 flex-wrap">
           {[
             { label: 'Documentation', to: '/docs/getting-started' },
             { label: 'Components', to: '/foundations/button' },
@@ -33,7 +33,7 @@ export default function Footer() {
             <Link
               key={link.label}
               to={link.to}
-              className="text-xs font-mono text-text-tertiary hover:text-text-primary transition-colors"
+              className="text-xs font-mono text-text-tertiary hover:text-text-primary transition-colors py-2"
             >
               {link.label}
             </Link>
@@ -45,7 +45,7 @@ export default function Footer() {
             <a
               key={link.label}
               href={link.href}
-              className="text-xs font-mono text-text-tertiary hover:text-text-primary transition-colors"
+              className="text-xs font-mono text-text-tertiary hover:text-text-primary transition-colors py-2"
             >
               {link.label}
             </a>

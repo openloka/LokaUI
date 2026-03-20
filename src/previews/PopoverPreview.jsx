@@ -22,7 +22,7 @@ export default function PopoverPreview() {
         <div style={{
           position: 'absolute',
           top: '100%',
-          left: 0,
+          right: 0,
           marginTop: 6,
           padding: 12,
           borderRadius: 8,

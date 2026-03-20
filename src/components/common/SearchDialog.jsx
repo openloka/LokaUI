@@ -5,7 +5,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
 import { searchComponents } from '../../utils/fuzzy'
 import { CATEGORIES } from '../../constants/Categories'
 
-export default function SearchDialog() {
+export default function SearchDialog({ trigger }) {
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState('')
   const navigate = useNavigate()
@@ -31,6 +31,11 @@ export default function SearchDialog() {
 
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
+      {trigger && (
+        <Dialog.Trigger asChild>
+          {trigger}
+        </Dialog.Trigger>
+      )}
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50" />
         <Dialog.Content

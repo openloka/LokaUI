@@ -8,6 +8,9 @@ function TooltipDemo({ label, tip }) {
       <button
         onMouseEnter={() => setShow(true)}
         onMouseLeave={() => setShow(false)}
+        onFocus={() => setShow(true)}
+        onBlur={() => setShow(false)}
+        onClick={() => setShow(prev => !prev)}
         style={{
           padding: '6px 12px',
           borderRadius: 6,

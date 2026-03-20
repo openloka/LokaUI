@@ -14,8 +14,8 @@ export default function PaginationPreview() {
   }
 
   const btnStyle = (active) => ({
-    width: 28,
-    height: 28,
+    minWidth: 36,
+    minHeight: 36,
     borderRadius: 6,
     fontSize: 11,
     fontWeight: active ? 600 : 400,

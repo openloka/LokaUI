@@ -7,7 +7,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="p-2 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-colors"
+      className="p-2.5 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-colors"
       aria-label={`Switch to ${mode === 'dark' ? 'light' : 'dark'} mode`}
     >
       {mode === 'dark' ? (

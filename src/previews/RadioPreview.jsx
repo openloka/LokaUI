@@ -19,7 +19,7 @@ export default function RadioPreview() {
             alignItems: 'center',
             gap: 10,
             cursor: 'pointer',
-            padding: '6px 10px',
+            padding: '10px',
             borderRadius: 8,
             border: `1px solid ${selected === plan.value ? 'var(--accent)' : 'var(--border)'}`,
             background: selected === plan.value ? 'var(--accent-muted)' : 'transparent',

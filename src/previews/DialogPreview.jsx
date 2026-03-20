@@ -48,9 +48,9 @@ export default function DialogPreview() {
               <button
                 onClick={() => setOpen(false)}
                 style={{
-                  padding: '5px 12px',
+                  padding: '8px 16px',
                   borderRadius: 6,
-                  fontSize: 10,
+                  fontSize: 11,
                   fontWeight: 600,
                   background: 'transparent',
                   border: '1px solid var(--border)',
@@ -61,9 +61,9 @@ export default function DialogPreview() {
               <button
                 onClick={() => setOpen(false)}
                 style={{
-                  padding: '5px 12px',
+                  padding: '8px 16px',
                   borderRadius: 6,
-                  fontSize: 10,
+                  fontSize: 11,
                   fontWeight: 600,
                   background: 'var(--accent)',
                   color: 'var(--accent-text)',

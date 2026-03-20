@@ -95,7 +95,7 @@ export default function ComponentBrowser() {
       style={{ padding: '0 clamp(16px, 4vw, 48px) 100px' }}
     >
       <div data-anim className="mb-10">
-        <h2 className="font-pixel text-4xl font-extrabold tracking-tight text-center mb-2">
+        <h2 className="font-pixel text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-center mb-2">
           {filtered.length} Components
         </h2>
         <p className="text-center text-sm text-text-secondary mb-8">
@@ -110,7 +110,7 @@ export default function ComponentBrowser() {
               <button
                 key={cat}
                 onClick={() => setFilter(isActive && cat !== 'All' ? 'All' : cat)}
-                className={`px-4 py-1.5 rounded-lg text-xs font-semibold border cursor-pointer transition-all ${
+                className={`px-4 py-2.5 rounded-lg text-xs font-semibold border cursor-pointer transition-all ${
                   isActive
                     ? 'bg-accent-muted text-accent border-border-accent'
                     : 'bg-transparent text-text-tertiary border-border hover:text-text-secondary'
@@ -123,7 +123,7 @@ export default function ComponentBrowser() {
         </div>
       </div>
 
-      <div className="grid gap-4.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}>
+      <div className="grid gap-4.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(320px, 100%), 1fr))' }}>
         {filtered.map(comp => (
           <ComponentCard key={comp.name} comp={comp} />
         ))}

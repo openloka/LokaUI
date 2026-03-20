@@ -21,7 +21,7 @@ export default function CliInstallation({ componentName, platform = 'react' }) {
   return (
     <div className="flex items-center gap-3 rounded-lg border border-border bg-code-bg px-4 py-3">
       <CommandLineIcon className="h-5 w-5 shrink-0 text-text-secondary" />
-      <code className="flex-1 font-mono text-sm text-text-primary">{command}</code>
+      <code className="flex-1 min-w-0 overflow-x-auto font-mono text-sm text-text-primary">{command}</code>
       <button
         onClick={handleCopy}
         className="shrink-0 text-text-secondary hover:text-accent transition-colors"

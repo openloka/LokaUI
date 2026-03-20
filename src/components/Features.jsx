@@ -47,12 +47,12 @@ export default function Features() {
       style={{ padding: '0 clamp(16px, 4vw, 48px) 100px' }}
     >
       <div data-anim className="text-center mb-14">
-        <h2 className="font-pixel text-4xl font-extrabold tracking-tight">
+        <h2 className="font-pixel text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
           Designed for <em className="text-accent italic">developers</em>
         </h2>
       </div>
 
-      <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))' }}>
+      <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(300px, 100%), 1fr))' }}>
         {features.map((f, i) => (
           <div
             key={f.title}

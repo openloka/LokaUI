@@ -51,7 +51,7 @@ export default function ColorSchemeDropdown() {
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-2 py-1.5 px-2.5 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-colors"
+        className="flex items-center gap-2 py-2.5 px-2.5 rounded-lg text-text-secondary hover:text-text-primary hover:bg-bg-hover transition-colors"
         aria-label="Change color scheme"
       >
         <SwatchIcon className="w-5 h-5" />

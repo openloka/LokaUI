@@ -100,7 +100,7 @@ export default function Showcase() {
       className="max-w-275 mx-auto pb-20"
       style={{ padding: '0 clamp(16px, 4vw, 48px) 80px' }}
     >
-      <div data-anim className="grid grid-cols-1 md:grid-cols-2 gap-6" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))' }}>
+      <div data-anim className="grid grid-cols-1 md:grid-cols-2 gap-6" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(340px, 100%), 1fr))' }}>
         <SignInCard />
         <AnalyticsDashboard />
       </div>
