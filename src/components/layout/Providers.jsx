@@ -4,7 +4,7 @@ import { ThemeProvider } from '../../theme'
 
 export default function Providers({ children }) {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/LokaUI">
       <NuqsAdapter>
         <ThemeProvider>
           {children}
