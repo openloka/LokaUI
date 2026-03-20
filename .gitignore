@@ -4,4 +4,4 @@ dist
 .env.local
 *.log
 .superpowers/
-docs
+/docs
