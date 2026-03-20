@@ -11,6 +11,51 @@ export const info = {
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the input is disabled' },
     { name: 'error', type: 'boolean', default: false, description: 'Whether to show error styling' },
   ],
+  usage: {
+    'JS-CSS': `import Input from './components/ui/Input'
+
+function App() {
+  return (
+    <Input type="text" placeholder="Enter your email..." />
+  )
+}`,
+    'JS-TW': `import Input from './components/ui/Input'
+
+function App() {
+  return (
+    <Input type="text" placeholder="Enter your email..." />
+  )
+}`,
+    'TS-CSS': `import Input from './components/ui/Input'
+
+function App(): JSX.Element {
+  return (
+    <Input type="text" placeholder="Enter your email..." />
+  )
+}`,
+    'TS-TW': `import Input from './components/ui/Input'
+
+function App(): JSX.Element {
+  return (
+    <Input type="text" placeholder="Enter your email..." />
+  )
+}`,
+    'HTML-TW': `<x-input type="text" placeholder="Enter your email..." />`,
+    'RN-TW': `import Input from './components/ui/Input'
+
+export default function Screen() {
+  return (
+    <Input type="text" placeholder="Enter your email..." />
+  )
+}`,
+    'RN-StyleSheet': `import Input from './components/ui/Input'
+
+export default function Screen() {
+  return (
+    <Input type="text" placeholder="Enter your email..." />
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

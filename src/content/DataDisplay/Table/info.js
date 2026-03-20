@@ -9,6 +9,160 @@ export const info = {
     { name: 'striped', type: 'boolean', default: false, description: 'Whether to alternate row background colors' },
     { name: 'bordered', type: 'boolean', default: false, description: 'Whether to show cell borders' },
   ],
+  usage: {
+    'JS-CSS': `import { Table, TableHead, TableBody, TableRow, TableCell } from './components/ui/Table'
+
+function App() {
+  return (
+    <Table striped>
+      <TableHead>
+        <TableRow>
+          <TableCell>Name</TableCell>
+          <TableCell>Role</TableCell>
+          <TableCell>Status</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableCell>Alice</TableCell>
+          <TableCell>Engineer</TableCell>
+          <TableCell>Active</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Bob</TableCell>
+          <TableCell>Designer</TableCell>
+          <TableCell>Away</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  )
+}`,
+    'JS-TW': `import { Table, TableHead, TableBody, TableRow, TableCell } from './components/ui/Table'
+
+function App() {
+  return (
+    <Table striped>
+      <TableHead>
+        <TableRow>
+          <TableCell>Name</TableCell>
+          <TableCell>Role</TableCell>
+          <TableCell>Status</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableCell>Alice</TableCell>
+          <TableCell>Engineer</TableCell>
+          <TableCell>Active</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableCell>Bob</TableCell>
+          <TableCell>Designer</TableCell>
+          <TableCell>Away</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  )
+}`,
+    'TS-CSS': `import { Table, TableHead, TableBody, TableRow, TableCell } from './components/ui/Table'
+
+function App(): JSX.Element {
+  return (
+    <Table striped>
+      <TableHead>
+        <TableRow>
+          <TableCell>Name</TableCell>
+          <TableCell>Role</TableCell>
+          <TableCell>Status</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableCell>Alice</TableCell>
+          <TableCell>Engineer</TableCell>
+          <TableCell>Active</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  )
+}`,
+    'TS-TW': `import { Table, TableHead, TableBody, TableRow, TableCell } from './components/ui/Table'
+
+function App(): JSX.Element {
+  return (
+    <Table striped>
+      <TableHead>
+        <TableRow>
+          <TableCell>Name</TableCell>
+          <TableCell>Role</TableCell>
+          <TableCell>Status</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableCell>Alice</TableCell>
+          <TableCell>Engineer</TableCell>
+          <TableCell>Active</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  )
+}`,
+    'HTML-TW': `<x-table striped>
+  <x-table-head>
+    <x-table-row>
+      <x-table-cell>Name</x-table-cell>
+      <x-table-cell>Role</x-table-cell>
+    </x-table-row>
+  </x-table-head>
+  <x-table-body>
+    <x-table-row>
+      <x-table-cell>Alice</x-table-cell>
+      <x-table-cell>Engineer</x-table-cell>
+    </x-table-row>
+  </x-table-body>
+</x-table>`,
+    'RN-TW': `import { Table, TableHead, TableBody, TableRow, TableCell } from './components/ui/Table'
+
+export default function Screen() {
+  return (
+    <Table striped>
+      <TableHead>
+        <TableRow>
+          <TableCell>Name</TableCell>
+          <TableCell>Role</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableCell>Alice</TableCell>
+          <TableCell>Engineer</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  )
+}`,
+    'RN-StyleSheet': `import { Table, TableHead, TableBody, TableRow, TableCell } from './components/ui/Table'
+
+export default function Screen() {
+  return (
+    <Table striped>
+      <TableHead>
+        <TableRow>
+          <TableCell>Name</TableCell>
+          <TableCell>Role</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <TableRow>
+          <TableCell>Alice</TableCell>
+          <TableCell>Engineer</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

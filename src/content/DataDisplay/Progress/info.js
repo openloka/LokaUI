@@ -10,6 +10,51 @@ export const info = {
     { name: 'variant', type: 'enum', options: ['default', 'success', 'warning'], default: 'default', description: 'Visual style variant of the progress bar' },
     { name: 'showLabel', type: 'boolean', default: false, description: 'Whether to display the percentage label' },
   ],
+  usage: {
+    'JS-CSS': `import Progress from './components/ui/Progress'
+
+function App() {
+  return (
+    <Progress value={65} variant="default" showLabel />
+  )
+}`,
+    'JS-TW': `import Progress from './components/ui/Progress'
+
+function App() {
+  return (
+    <Progress value={65} variant="default" showLabel />
+  )
+}`,
+    'TS-CSS': `import Progress from './components/ui/Progress'
+
+function App(): JSX.Element {
+  return (
+    <Progress value={65} variant="default" showLabel />
+  )
+}`,
+    'TS-TW': `import Progress from './components/ui/Progress'
+
+function App(): JSX.Element {
+  return (
+    <Progress value={65} variant="default" showLabel />
+  )
+}`,
+    'HTML-TW': `<x-progress value="65" variant="default" show-label />`,
+    'RN-TW': `import Progress from './components/ui/Progress'
+
+export default function Screen() {
+  return (
+    <Progress value={65} variant="default" showLabel />
+  )
+}`,
+    'RN-StyleSheet': `import Progress from './components/ui/Progress'
+
+export default function Screen() {
+  return (
+    <Progress value={65} variant="default" showLabel />
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

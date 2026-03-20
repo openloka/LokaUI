@@ -9,6 +9,65 @@ export const info = {
     { name: 'variant', type: 'enum', options: ['default', 'success', 'warning', 'error', 'info'], default: 'default', description: 'Visual style variant of the badge' },
     { name: 'size', type: 'enum', options: ['sm', 'md'], default: 'md', description: 'Size of the badge' },
   ],
+  usage: {
+    'JS-CSS': `import Badge from './components/ui/Badge'
+
+function App() {
+  return (
+    <Badge variant="success" size="md">
+      Active
+    </Badge>
+  )
+}`,
+    'JS-TW': `import Badge from './components/ui/Badge'
+
+function App() {
+  return (
+    <Badge variant="success" size="md">
+      Active
+    </Badge>
+  )
+}`,
+    'TS-CSS': `import Badge from './components/ui/Badge'
+
+function App(): JSX.Element {
+  return (
+    <Badge variant="success" size="md">
+      Active
+    </Badge>
+  )
+}`,
+    'TS-TW': `import Badge from './components/ui/Badge'
+
+function App(): JSX.Element {
+  return (
+    <Badge variant="success" size="md">
+      Active
+    </Badge>
+  )
+}`,
+    'HTML-TW': `<x-badge variant="success" size="md">
+  Active
+</x-badge>`,
+    'RN-TW': `import Badge from './components/ui/Badge'
+
+export default function Screen() {
+  return (
+    <Badge variant="success" size="md">
+      Active
+    </Badge>
+  )
+}`,
+    'RN-StyleSheet': `import Badge from './components/ui/Badge'
+
+export default function Screen() {
+  return (
+    <Badge variant="success" size="md">
+      Active
+    </Badge>
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

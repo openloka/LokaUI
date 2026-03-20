@@ -11,6 +11,73 @@ export const info = {
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the textarea is disabled' },
     { name: 'resize', type: 'enum', options: ['none', 'vertical', 'both'], default: 'vertical', description: 'Resize behavior of the textarea' },
   ],
+  usage: {
+    'JS-CSS': `import Textarea from './components/ui/Textarea'
+
+function App() {
+  return (
+    <Textarea
+      placeholder="Write your message..."
+      rows={4}
+      resize="vertical"
+    />
+  )
+}`,
+    'JS-TW': `import Textarea from './components/ui/Textarea'
+
+function App() {
+  return (
+    <Textarea
+      placeholder="Write your message..."
+      rows={4}
+      resize="vertical"
+    />
+  )
+}`,
+    'TS-CSS': `import Textarea from './components/ui/Textarea'
+
+function App(): JSX.Element {
+  return (
+    <Textarea
+      placeholder="Write your message..."
+      rows={4}
+      resize="vertical"
+    />
+  )
+}`,
+    'TS-TW': `import Textarea from './components/ui/Textarea'
+
+function App(): JSX.Element {
+  return (
+    <Textarea
+      placeholder="Write your message..."
+      rows={4}
+      resize="vertical"
+    />
+  )
+}`,
+    'HTML-TW': `<x-textarea placeholder="Write your message..." rows="4" resize="vertical" />`,
+    'RN-TW': `import Textarea from './components/ui/Textarea'
+
+export default function Screen() {
+  return (
+    <Textarea
+      placeholder="Write your message..."
+      rows={4}
+    />
+  )
+}`,
+    'RN-StyleSheet': `import Textarea from './components/ui/Textarea'
+
+export default function Screen() {
+  return (
+    <Textarea
+      placeholder="Write your message..."
+      rows={4}
+    />
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

@@ -10,6 +10,95 @@ export const info = {
     { name: 'title', type: 'string', default: '', description: 'Title text for the dialog header' },
     { name: 'onClose', type: '() => void', default: '', description: 'Callback when the dialog is closed' },
   ],
+  usage: {
+    'JS-CSS': `import Dialog from './components/ui/Dialog'
+
+function App() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>Open Dialog</button>
+      <Dialog open={open} title="Confirm Action" onClose={() => setOpen(false)}>
+        <p>Are you sure you want to proceed?</p>
+      </Dialog>
+    </>
+  )
+}`,
+    'JS-TW': `import Dialog from './components/ui/Dialog'
+
+function App() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>Open Dialog</button>
+      <Dialog open={open} title="Confirm Action" onClose={() => setOpen(false)}>
+        <p>Are you sure you want to proceed?</p>
+      </Dialog>
+    </>
+  )
+}`,
+    'TS-CSS': `import Dialog from './components/ui/Dialog'
+
+function App(): JSX.Element {
+  const [open, setOpen] = useState<boolean>(false)
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>Open Dialog</button>
+      <Dialog open={open} title="Confirm Action" onClose={() => setOpen(false)}>
+        <p>Are you sure you want to proceed?</p>
+      </Dialog>
+    </>
+  )
+}`,
+    'TS-TW': `import Dialog from './components/ui/Dialog'
+
+function App(): JSX.Element {
+  const [open, setOpen] = useState<boolean>(false)
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>Open Dialog</button>
+      <Dialog open={open} title="Confirm Action" onClose={() => setOpen(false)}>
+        <p>Are you sure you want to proceed?</p>
+      </Dialog>
+    </>
+  )
+}`,
+    'HTML-TW': `<x-dialog open title="Confirm Action">
+  <p>Are you sure you want to proceed?</p>
+</x-dialog>`,
+    'RN-TW': `import Dialog from './components/ui/Dialog'
+
+export default function Screen() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <Button onPress={() => setOpen(true)}>Open Dialog</Button>
+      <Dialog open={open} title="Confirm Action" onClose={() => setOpen(false)}>
+        <Text>Are you sure you want to proceed?</Text>
+      </Dialog>
+    </>
+  )
+}`,
+    'RN-StyleSheet': `import Dialog from './components/ui/Dialog'
+
+export default function Screen() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <Button onPress={() => setOpen(true)}>Open Dialog</Button>
+      <Dialog open={open} title="Confirm Action" onClose={() => setOpen(false)}>
+        <Text>Are you sure you want to proceed?</Text>
+      </Dialog>
+    </>
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

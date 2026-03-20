@@ -9,6 +9,65 @@ export const info = {
     { name: 'content', type: 'string', default: '', description: 'Text content displayed in the tooltip' },
     { name: 'side', type: 'enum', options: ['top', 'bottom', 'left', 'right'], default: 'top', description: 'Position of the tooltip relative to the trigger' },
   ],
+  usage: {
+    'JS-CSS': `import Tooltip from './components/ui/Tooltip'
+
+function App() {
+  return (
+    <Tooltip content="More info" side="top">
+      <button>Hover me</button>
+    </Tooltip>
+  )
+}`,
+    'JS-TW': `import Tooltip from './components/ui/Tooltip'
+
+function App() {
+  return (
+    <Tooltip content="More info" side="top">
+      <button>Hover me</button>
+    </Tooltip>
+  )
+}`,
+    'TS-CSS': `import Tooltip from './components/ui/Tooltip'
+
+function App(): JSX.Element {
+  return (
+    <Tooltip content="More info" side="top">
+      <button>Hover me</button>
+    </Tooltip>
+  )
+}`,
+    'TS-TW': `import Tooltip from './components/ui/Tooltip'
+
+function App(): JSX.Element {
+  return (
+    <Tooltip content="More info" side="top">
+      <button>Hover me</button>
+    </Tooltip>
+  )
+}`,
+    'HTML-TW': `<x-tooltip content="More info" side="top">
+  <button>Hover me</button>
+</x-tooltip>`,
+    'RN-TW': `import Tooltip from './components/ui/Tooltip'
+
+export default function Screen() {
+  return (
+    <Tooltip content="More info" side="top">
+      <Button onPress={() => {}}>Hover me</Button>
+    </Tooltip>
+  )
+}`,
+    'RN-StyleSheet': `import Tooltip from './components/ui/Tooltip'
+
+export default function Screen() {
+  return (
+    <Tooltip content="More info" side="top">
+      <Button onPress={() => {}}>Hover me</Button>
+    </Tooltip>
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

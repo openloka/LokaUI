@@ -10,6 +10,75 @@ export const info = {
     { name: 'src', type: 'string', default: '', description: 'Image source URL' },
     { name: 'fallback', type: 'string', default: '', description: 'Fallback text or initials when image is unavailable' },
   ],
+  usage: {
+    'JS-CSS': `import Avatar from './components/ui/Avatar'
+
+function App() {
+  return (
+    <Avatar
+      size="md"
+      src="/avatar.jpg"
+      fallback="JD"
+    />
+  )
+}`,
+    'JS-TW': `import Avatar from './components/ui/Avatar'
+
+function App() {
+  return (
+    <Avatar
+      size="md"
+      src="/avatar.jpg"
+      fallback="JD"
+    />
+  )
+}`,
+    'TS-CSS': `import Avatar from './components/ui/Avatar'
+
+function App(): JSX.Element {
+  return (
+    <Avatar
+      size="md"
+      src="/avatar.jpg"
+      fallback="JD"
+    />
+  )
+}`,
+    'TS-TW': `import Avatar from './components/ui/Avatar'
+
+function App(): JSX.Element {
+  return (
+    <Avatar
+      size="md"
+      src="/avatar.jpg"
+      fallback="JD"
+    />
+  )
+}`,
+    'HTML-TW': `<x-avatar size="md" src="/avatar.jpg" fallback="JD" />`,
+    'RN-TW': `import Avatar from './components/ui/Avatar'
+
+export default function Screen() {
+  return (
+    <Avatar
+      size="md"
+      source={{ uri: 'https://example.com/avatar.jpg' }}
+      fallback="JD"
+    />
+  )
+}`,
+    'RN-StyleSheet': `import Avatar from './components/ui/Avatar'
+
+export default function Screen() {
+  return (
+    <Avatar
+      size="md"
+      source={{ uri: 'https://example.com/avatar.jpg' }}
+      fallback="JD"
+    />
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

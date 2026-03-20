@@ -10,6 +10,87 @@ export const info = {
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the toggle is disabled' },
     { name: 'label', type: 'string', default: '', description: 'Label text for the toggle' },
   ],
+  usage: {
+    'JS-CSS': `import Toggle from './components/ui/Toggle'
+
+function App() {
+  const [enabled, setEnabled] = useState(false)
+
+  return (
+    <Toggle
+      checked={enabled}
+      onChange={setEnabled}
+      label="Notifications"
+    />
+  )
+}`,
+    'JS-TW': `import Toggle from './components/ui/Toggle'
+
+function App() {
+  const [enabled, setEnabled] = useState(false)
+
+  return (
+    <Toggle
+      checked={enabled}
+      onChange={setEnabled}
+      label="Notifications"
+    />
+  )
+}`,
+    'TS-CSS': `import Toggle from './components/ui/Toggle'
+
+function App(): JSX.Element {
+  const [enabled, setEnabled] = useState<boolean>(false)
+
+  return (
+    <Toggle
+      checked={enabled}
+      onChange={setEnabled}
+      label="Notifications"
+    />
+  )
+}`,
+    'TS-TW': `import Toggle from './components/ui/Toggle'
+
+function App(): JSX.Element {
+  const [enabled, setEnabled] = useState<boolean>(false)
+
+  return (
+    <Toggle
+      checked={enabled}
+      onChange={setEnabled}
+      label="Notifications"
+    />
+  )
+}`,
+    'HTML-TW': `<x-toggle checked label="Notifications" />`,
+    'RN-TW': `import Toggle from './components/ui/Toggle'
+
+export default function Screen() {
+  const [enabled, setEnabled] = useState(false)
+
+  return (
+    <Toggle
+      checked={enabled}
+      onChange={setEnabled}
+      label="Notifications"
+    />
+  )
+}`,
+    'RN-StyleSheet': `import Toggle from './components/ui/Toggle'
+
+export default function Screen() {
+  const [enabled, setEnabled] = useState(false)
+
+  return (
+    <Toggle
+      checked={enabled}
+      onChange={setEnabled}
+      label="Notifications"
+    />
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

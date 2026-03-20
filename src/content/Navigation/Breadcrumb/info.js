@@ -8,6 +8,79 @@ export const info = {
   props: [
     { name: 'separator', type: 'enum', options: ['chevron', 'slash', 'dot'], default: 'chevron', description: 'Separator character between breadcrumb items' },
   ],
+  usage: {
+    'JS-CSS': `import { Breadcrumb, BreadcrumbItem } from './components/ui/Breadcrumb'
+
+function App() {
+  return (
+    <Breadcrumb separator="chevron">
+      <BreadcrumbItem href="/">Home</BreadcrumbItem>
+      <BreadcrumbItem href="/docs">Docs</BreadcrumbItem>
+      <BreadcrumbItem active>Current Page</BreadcrumbItem>
+    </Breadcrumb>
+  )
+}`,
+    'JS-TW': `import { Breadcrumb, BreadcrumbItem } from './components/ui/Breadcrumb'
+
+function App() {
+  return (
+    <Breadcrumb separator="chevron">
+      <BreadcrumbItem href="/">Home</BreadcrumbItem>
+      <BreadcrumbItem href="/docs">Docs</BreadcrumbItem>
+      <BreadcrumbItem active>Current Page</BreadcrumbItem>
+    </Breadcrumb>
+  )
+}`,
+    'TS-CSS': `import { Breadcrumb, BreadcrumbItem } from './components/ui/Breadcrumb'
+
+function App(): JSX.Element {
+  return (
+    <Breadcrumb separator="chevron">
+      <BreadcrumbItem href="/">Home</BreadcrumbItem>
+      <BreadcrumbItem href="/docs">Docs</BreadcrumbItem>
+      <BreadcrumbItem active>Current Page</BreadcrumbItem>
+    </Breadcrumb>
+  )
+}`,
+    'TS-TW': `import { Breadcrumb, BreadcrumbItem } from './components/ui/Breadcrumb'
+
+function App(): JSX.Element {
+  return (
+    <Breadcrumb separator="chevron">
+      <BreadcrumbItem href="/">Home</BreadcrumbItem>
+      <BreadcrumbItem href="/docs">Docs</BreadcrumbItem>
+      <BreadcrumbItem active>Current Page</BreadcrumbItem>
+    </Breadcrumb>
+  )
+}`,
+    'HTML-TW': `<x-breadcrumb separator="chevron">
+  <x-breadcrumb-item href="/">Home</x-breadcrumb-item>
+  <x-breadcrumb-item href="/docs">Docs</x-breadcrumb-item>
+  <x-breadcrumb-item active>Current Page</x-breadcrumb-item>
+</x-breadcrumb>`,
+    'RN-TW': `import { Breadcrumb, BreadcrumbItem } from './components/ui/Breadcrumb'
+
+export default function Screen() {
+  return (
+    <Breadcrumb separator="chevron">
+      <BreadcrumbItem onPress={() => navigate('/')}>Home</BreadcrumbItem>
+      <BreadcrumbItem onPress={() => navigate('/docs')}>Docs</BreadcrumbItem>
+      <BreadcrumbItem active>Current Page</BreadcrumbItem>
+    </Breadcrumb>
+  )
+}`,
+    'RN-StyleSheet': `import { Breadcrumb, BreadcrumbItem } from './components/ui/Breadcrumb'
+
+export default function Screen() {
+  return (
+    <Breadcrumb separator="chevron">
+      <BreadcrumbItem onPress={() => navigate('/')}>Home</BreadcrumbItem>
+      <BreadcrumbItem onPress={() => navigate('/docs')}>Docs</BreadcrumbItem>
+      <BreadcrumbItem active>Current Page</BreadcrumbItem>
+    </Breadcrumb>
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

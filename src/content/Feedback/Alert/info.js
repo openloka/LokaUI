@@ -9,6 +9,65 @@ export const info = {
     { name: 'variant', type: 'enum', options: ['info', 'success', 'warning', 'error'], default: 'info', description: 'Visual style variant of the alert' },
     { name: 'dismissible', type: 'boolean', default: false, description: 'Whether the alert can be dismissed' },
   ],
+  usage: {
+    'JS-CSS': `import Alert from './components/ui/Alert'
+
+function App() {
+  return (
+    <Alert variant="info" dismissible>
+      Your account has been updated successfully.
+    </Alert>
+  )
+}`,
+    'JS-TW': `import Alert from './components/ui/Alert'
+
+function App() {
+  return (
+    <Alert variant="info" dismissible>
+      Your account has been updated successfully.
+    </Alert>
+  )
+}`,
+    'TS-CSS': `import Alert from './components/ui/Alert'
+
+function App(): JSX.Element {
+  return (
+    <Alert variant="info" dismissible>
+      Your account has been updated successfully.
+    </Alert>
+  )
+}`,
+    'TS-TW': `import Alert from './components/ui/Alert'
+
+function App(): JSX.Element {
+  return (
+    <Alert variant="info" dismissible>
+      Your account has been updated successfully.
+    </Alert>
+  )
+}`,
+    'HTML-TW': `<x-alert variant="info" dismissible>
+  Your account has been updated successfully.
+</x-alert>`,
+    'RN-TW': `import Alert from './components/ui/Alert'
+
+export default function Screen() {
+  return (
+    <Alert variant="info" dismissible>
+      Your account has been updated successfully.
+    </Alert>
+  )
+}`,
+    'RN-StyleSheet': `import Alert from './components/ui/Alert'
+
+export default function Screen() {
+  return (
+    <Alert variant="info" dismissible>
+      Your account has been updated successfully.
+    </Alert>
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

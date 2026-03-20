@@ -9,6 +9,51 @@ export const info = {
     { name: 'size', type: 'enum', options: ['sm', 'md', 'lg'], default: 'md', description: 'Size of the spinner' },
     { name: 'color', type: 'enum', options: ['accent', 'white', 'current'], default: 'accent', description: 'Color of the spinner' },
   ],
+  usage: {
+    'JS-CSS': `import Spinner from './components/ui/Spinner'
+
+function App() {
+  return (
+    <Spinner size="md" color="accent" />
+  )
+}`,
+    'JS-TW': `import Spinner from './components/ui/Spinner'
+
+function App() {
+  return (
+    <Spinner size="md" color="accent" />
+  )
+}`,
+    'TS-CSS': `import Spinner from './components/ui/Spinner'
+
+function App(): JSX.Element {
+  return (
+    <Spinner size="md" color="accent" />
+  )
+}`,
+    'TS-TW': `import Spinner from './components/ui/Spinner'
+
+function App(): JSX.Element {
+  return (
+    <Spinner size="md" color="accent" />
+  )
+}`,
+    'HTML-TW': `<x-spinner size="md" color="accent" />`,
+    'RN-TW': `import Spinner from './components/ui/Spinner'
+
+export default function Screen() {
+  return (
+    <Spinner size="md" color="accent" />
+  )
+}`,
+    'RN-StyleSheet': `import Spinner from './components/ui/Spinner'
+
+export default function Screen() {
+  return (
+    <Spinner size="md" color="accent" />
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

@@ -10,6 +10,93 @@ export const info = {
     { name: 'current', type: 'number', default: 1, description: 'Currently active page' },
     { name: 'siblingCount', type: 'number', default: 1, description: 'Number of sibling pages shown around the current page' },
   ],
+  usage: {
+    'JS-CSS': `import Pagination from './components/ui/Pagination'
+
+function App() {
+  const [page, setPage] = useState(1)
+
+  return (
+    <Pagination
+      total={10}
+      current={page}
+      siblingCount={1}
+      onChange={setPage}
+    />
+  )
+}`,
+    'JS-TW': `import Pagination from './components/ui/Pagination'
+
+function App() {
+  const [page, setPage] = useState(1)
+
+  return (
+    <Pagination
+      total={10}
+      current={page}
+      siblingCount={1}
+      onChange={setPage}
+    />
+  )
+}`,
+    'TS-CSS': `import Pagination from './components/ui/Pagination'
+
+function App(): JSX.Element {
+  const [page, setPage] = useState<number>(1)
+
+  return (
+    <Pagination
+      total={10}
+      current={page}
+      siblingCount={1}
+      onChange={setPage}
+    />
+  )
+}`,
+    'TS-TW': `import Pagination from './components/ui/Pagination'
+
+function App(): JSX.Element {
+  const [page, setPage] = useState<number>(1)
+
+  return (
+    <Pagination
+      total={10}
+      current={page}
+      siblingCount={1}
+      onChange={setPage}
+    />
+  )
+}`,
+    'HTML-TW': `<x-pagination total="10" current="1" sibling-count="1" />`,
+    'RN-TW': `import Pagination from './components/ui/Pagination'
+
+export default function Screen() {
+  const [page, setPage] = useState(1)
+
+  return (
+    <Pagination
+      total={10}
+      current={page}
+      siblingCount={1}
+      onChange={setPage}
+    />
+  )
+}`,
+    'RN-StyleSheet': `import Pagination from './components/ui/Pagination'
+
+export default function Screen() {
+  const [page, setPage] = useState(1)
+
+  return (
+    <Pagination
+      total={10}
+      current={page}
+      siblingCount={1}
+      onChange={setPage}
+    />
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

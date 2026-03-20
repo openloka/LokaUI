@@ -10,6 +10,79 @@ export const info = {
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the select is disabled' },
     { name: 'size', type: 'enum', options: ['sm', 'md', 'lg'], default: 'md', description: 'Size of the select control' },
   ],
+  usage: {
+    'JS-CSS': `import { Select, SelectOption } from './components/ui/Select'
+
+function App() {
+  return (
+    <Select placeholder="Choose a fruit" size="md">
+      <SelectOption value="apple">Apple</SelectOption>
+      <SelectOption value="banana">Banana</SelectOption>
+      <SelectOption value="cherry">Cherry</SelectOption>
+    </Select>
+  )
+}`,
+    'JS-TW': `import { Select, SelectOption } from './components/ui/Select'
+
+function App() {
+  return (
+    <Select placeholder="Choose a fruit" size="md">
+      <SelectOption value="apple">Apple</SelectOption>
+      <SelectOption value="banana">Banana</SelectOption>
+      <SelectOption value="cherry">Cherry</SelectOption>
+    </Select>
+  )
+}`,
+    'TS-CSS': `import { Select, SelectOption } from './components/ui/Select'
+
+function App(): JSX.Element {
+  return (
+    <Select placeholder="Choose a fruit" size="md">
+      <SelectOption value="apple">Apple</SelectOption>
+      <SelectOption value="banana">Banana</SelectOption>
+      <SelectOption value="cherry">Cherry</SelectOption>
+    </Select>
+  )
+}`,
+    'TS-TW': `import { Select, SelectOption } from './components/ui/Select'
+
+function App(): JSX.Element {
+  return (
+    <Select placeholder="Choose a fruit" size="md">
+      <SelectOption value="apple">Apple</SelectOption>
+      <SelectOption value="banana">Banana</SelectOption>
+      <SelectOption value="cherry">Cherry</SelectOption>
+    </Select>
+  )
+}`,
+    'HTML-TW': `<x-select placeholder="Choose a fruit" size="md">
+  <x-select-option value="apple">Apple</x-select-option>
+  <x-select-option value="banana">Banana</x-select-option>
+  <x-select-option value="cherry">Cherry</x-select-option>
+</x-select>`,
+    'RN-TW': `import { Select, SelectOption } from './components/ui/Select'
+
+export default function Screen() {
+  return (
+    <Select placeholder="Choose a fruit" size="md">
+      <SelectOption value="apple">Apple</SelectOption>
+      <SelectOption value="banana">Banana</SelectOption>
+      <SelectOption value="cherry">Cherry</SelectOption>
+    </Select>
+  )
+}`,
+    'RN-StyleSheet': `import { Select, SelectOption } from './components/ui/Select'
+
+export default function Screen() {
+  return (
+    <Select placeholder="Choose a fruit" size="md">
+      <SelectOption value="apple">Apple</SelectOption>
+      <SelectOption value="banana">Banana</SelectOption>
+      <SelectOption value="cherry">Cherry</SelectOption>
+    </Select>
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

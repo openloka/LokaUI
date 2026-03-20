@@ -10,6 +10,95 @@ export const info = {
     { name: 'side', type: 'enum', options: ['left', 'right'], default: 'right', description: 'Which side the drawer slides from' },
     { name: 'onClose', type: '() => void', default: '', description: 'Callback when the drawer is closed' },
   ],
+  usage: {
+    'JS-CSS': `import Drawer from './components/ui/Drawer'
+
+function App() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>Open Menu</button>
+      <Drawer open={open} side="right" onClose={() => setOpen(false)}>
+        <nav>Menu items</nav>
+      </Drawer>
+    </>
+  )
+}`,
+    'JS-TW': `import Drawer from './components/ui/Drawer'
+
+function App() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>Open Menu</button>
+      <Drawer open={open} side="right" onClose={() => setOpen(false)}>
+        <nav>Menu items</nav>
+      </Drawer>
+    </>
+  )
+}`,
+    'TS-CSS': `import Drawer from './components/ui/Drawer'
+
+function App(): JSX.Element {
+  const [open, setOpen] = useState<boolean>(false)
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>Open Menu</button>
+      <Drawer open={open} side="right" onClose={() => setOpen(false)}>
+        <nav>Menu items</nav>
+      </Drawer>
+    </>
+  )
+}`,
+    'TS-TW': `import Drawer from './components/ui/Drawer'
+
+function App(): JSX.Element {
+  const [open, setOpen] = useState<boolean>(false)
+
+  return (
+    <>
+      <button onClick={() => setOpen(true)}>Open Menu</button>
+      <Drawer open={open} side="right" onClose={() => setOpen(false)}>
+        <nav>Menu items</nav>
+      </Drawer>
+    </>
+  )
+}`,
+    'HTML-TW': `<x-drawer open side="right">
+  <nav>Menu items</nav>
+</x-drawer>`,
+    'RN-TW': `import Drawer from './components/ui/Drawer'
+
+export default function Screen() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <Button onPress={() => setOpen(true)}>Open Menu</Button>
+      <Drawer open={open} side="right" onClose={() => setOpen(false)}>
+        <View><Text>Menu items</Text></View>
+      </Drawer>
+    </>
+  )
+}`,
+    'RN-StyleSheet': `import Drawer from './components/ui/Drawer'
+
+export default function Screen() {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <>
+      <Button onPress={() => setOpen(true)}>Open Menu</Button>
+      <Drawer open={open} side="right" onClose={() => setOpen(false)}>
+        <View><Text>Menu items</Text></View>
+      </Drawer>
+    </>
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

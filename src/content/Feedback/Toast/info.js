@@ -9,6 +9,65 @@ export const info = {
     { name: 'variant', type: 'enum', options: ['default', 'success', 'error', 'warning'], default: 'default', description: 'Visual style variant of the toast' },
     { name: 'duration', type: 'number', default: 3000, description: 'Duration in milliseconds before auto-dismiss' },
   ],
+  usage: {
+    'JS-CSS': `import { toast } from './components/ui/Toast'
+
+function App() {
+  return (
+    <button onClick={() => toast.success('Changes saved!', { duration: 3000 })}>
+      Show Toast
+    </button>
+  )
+}`,
+    'JS-TW': `import { toast } from './components/ui/Toast'
+
+function App() {
+  return (
+    <button onClick={() => toast.success('Changes saved!', { duration: 3000 })}>
+      Show Toast
+    </button>
+  )
+}`,
+    'TS-CSS': `import { toast } from './components/ui/Toast'
+
+function App(): JSX.Element {
+  return (
+    <button onClick={() => toast.success('Changes saved!', { duration: 3000 })}>
+      Show Toast
+    </button>
+  )
+}`,
+    'TS-TW': `import { toast } from './components/ui/Toast'
+
+function App(): JSX.Element {
+  return (
+    <button onClick={() => toast.success('Changes saved!', { duration: 3000 })}>
+      Show Toast
+    </button>
+  )
+}`,
+    'HTML-TW': `<button onclick="toast.success('Changes saved!')">
+  Show Toast
+</button>`,
+    'RN-TW': `import { toast } from './components/ui/Toast'
+
+export default function Screen() {
+  return (
+    <Button onPress={() => toast.success('Changes saved!', { duration: 3000 })}>
+      Show Toast
+    </Button>
+  )
+}`,
+    'RN-StyleSheet': `import { toast } from './components/ui/Toast'
+
+export default function Screen() {
+  return (
+    <Button onPress={() => toast.success('Changes saved!', { duration: 3000 })}>
+      Show Toast
+    </Button>
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',

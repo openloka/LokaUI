@@ -11,6 +11,91 @@ export const info = {
     { name: 'label', type: 'string', default: '', description: 'Label text for the radio button' },
     { name: 'name', type: 'string', default: '', description: 'Group name for the radio button' },
   ],
+  usage: {
+    'JS-CSS': `import { RadioGroup, Radio } from './components/ui/Radio'
+
+function App() {
+  const [plan, setPlan] = useState('free')
+
+  return (
+    <RadioGroup name="plan" value={plan} onChange={setPlan}>
+      <Radio value="free" label="Free" />
+      <Radio value="pro" label="Pro" />
+      <Radio value="enterprise" label="Enterprise" />
+    </RadioGroup>
+  )
+}`,
+    'JS-TW': `import { RadioGroup, Radio } from './components/ui/Radio'
+
+function App() {
+  const [plan, setPlan] = useState('free')
+
+  return (
+    <RadioGroup name="plan" value={plan} onChange={setPlan}>
+      <Radio value="free" label="Free" />
+      <Radio value="pro" label="Pro" />
+      <Radio value="enterprise" label="Enterprise" />
+    </RadioGroup>
+  )
+}`,
+    'TS-CSS': `import { RadioGroup, Radio } from './components/ui/Radio'
+
+function App(): JSX.Element {
+  const [plan, setPlan] = useState<string>('free')
+
+  return (
+    <RadioGroup name="plan" value={plan} onChange={setPlan}>
+      <Radio value="free" label="Free" />
+      <Radio value="pro" label="Pro" />
+      <Radio value="enterprise" label="Enterprise" />
+    </RadioGroup>
+  )
+}`,
+    'TS-TW': `import { RadioGroup, Radio } from './components/ui/Radio'
+
+function App(): JSX.Element {
+  const [plan, setPlan] = useState<string>('free')
+
+  return (
+    <RadioGroup name="plan" value={plan} onChange={setPlan}>
+      <Radio value="free" label="Free" />
+      <Radio value="pro" label="Pro" />
+      <Radio value="enterprise" label="Enterprise" />
+    </RadioGroup>
+  )
+}`,
+    'HTML-TW': `<x-radio-group name="plan">
+  <x-radio value="free" label="Free" />
+  <x-radio value="pro" label="Pro" />
+  <x-radio value="enterprise" label="Enterprise" />
+</x-radio-group>`,
+    'RN-TW': `import { RadioGroup, Radio } from './components/ui/Radio'
+
+export default function Screen() {
+  const [plan, setPlan] = useState('free')
+
+  return (
+    <RadioGroup name="plan" value={plan} onChange={setPlan}>
+      <Radio value="free" label="Free" />
+      <Radio value="pro" label="Pro" />
+      <Radio value="enterprise" label="Enterprise" />
+    </RadioGroup>
+  )
+}`,
+    'RN-StyleSheet': `import { RadioGroup, Radio } from './components/ui/Radio'
+
+export default function Screen() {
+  const [plan, setPlan] = useState('free')
+
+  return (
+    <RadioGroup name="plan" value={plan} onChange={setPlan}>
+      <Radio value="free" label="Free" />
+      <Radio value="pro" label="Pro" />
+      <Radio value="enterprise" label="Enterprise" />
+    </RadioGroup>
+  )
+}`,
+  },
   sections: [
     {
       id: 'basic',
