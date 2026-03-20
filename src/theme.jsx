@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useCallback } from 'react'
+import { createContext, useContext, useState, useCallback, useEffect, useMemo } from 'react'
 
 const darkTokens = {
   '--bg': '#09090b',
@@ -70,29 +70,55 @@ const lightTokens = {
   '--code-bg': 'rgba(0,0,0,0.04)',
 }
 
-const ThemeCtx = createContext()
+const STORAGE_KEY = 'lokaui-theme'
+
+function applyTokens(tokens) {
+  const style = document.documentElement.style
+  for (const [key, value] of Object.entries(tokens)) {
+    style.setProperty(key, value)
+  }
+}
+
+function applyMode(mode) {
+  const tokens = mode === 'dark' ? darkTokens : lightTokens
+  applyTokens(tokens)
+  if (mode === 'dark') {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+}
+
+const ThemeContext = createContext()
 
 export function ThemeProvider({ children }) {
-  const [mode, setMode] = useState('dark')
-  const toggle = useCallback(() => setMode(m => m === 'dark' ? 'light' : 'dark'), [])
-  const tokens = mode === 'dark' ? darkTokens : lightTokens
+  const [mode, setMode] = useState(() => {
+    if (globalThis.window !== undefined) {
+      return localStorage.getItem(STORAGE_KEY) || 'dark'
+    }
+    return 'dark'
+  })
+
+  useEffect(() => {
+    applyMode(mode)
+    localStorage.setItem(STORAGE_KEY, mode)
+  }, [mode])
+
+  const toggle = useCallback(() => {
+    setMode(m => (m === 'dark' ? 'light' : 'dark'))
+  }, [])
+
+  const value = useMemo(() => ({ mode, toggle }), [mode, toggle])
 
   return (
-    <ThemeCtx.Provider value={{ mode, toggle, tokens }}>
-      <div style={{
-        ...tokens,
-        background: 'var(--bg)',
-        color: 'var(--text-primary)',
-        minHeight: '100vh',
-        fontFamily: '"Geist", "Inter", system-ui, sans-serif',
-        transition: 'background 0.4s ease, color 0.4s ease',
-      }}>
-        {children}
-      </div>
-    </ThemeCtx.Provider>
+    <ThemeContext.Provider value={value}>
+      {children}
+    </ThemeContext.Provider>
   )
 }
 
 export function useTheme() {
-  return useContext(ThemeCtx)
+  const ctx = useContext(ThemeContext)
+  if (!ctx) throw new Error('useTheme must be used within ThemeProvider')
+  return ctx
 }
