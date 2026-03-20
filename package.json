@@ -1,8 +1,15 @@
 {
   "name": "loka-ui",
-  "private": true,
   "version": "0.1.0",
   "type": "module",
+  "description": "An open source collection of beautiful, accessible, and fully customizable UI components for React, Laravel, and React Native.",
+  "author": "LokaUI",
+  "license": "MIT",
+  "homepage": "https://lokaui.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openloka/LokaUI"
+  },
   "scripts": {
     "dev": "vite",
     "build": "node scripts/generateSitemap.js && node scripts/generateLlmsText.js && vite build",

@@ -1,4 +1,4 @@
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -27,8 +27,8 @@ export default function Footer() {
         {/* Links */}
         <nav className="flex gap-6">
           {[
-            { label: 'Documentation', to: '/docs' },
-            { label: 'Components', to: '/docs/components' },
+            { label: 'Documentation', to: '/docs/getting-started' },
+            { label: 'Components', to: '/foundations/button' },
           ].map(link => (
             <Link
               key={link.label}
@@ -39,8 +39,8 @@ export default function Footer() {
             </Link>
           ))}
           {[
-            { label: 'GitHub', href: '#' },
-            { label: 'Twitter', href: '#' },
+            { label: 'GitHub', href: 'https://github.com/openloka/LokaUI' },
+            { label: 'Twitter', href: 'https://twitter.com/lokaui' },
           ].map(link => (
             <a
               key={link.label}
