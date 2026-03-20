@@ -15,7 +15,7 @@ function Logo() {
           <circle cx="15" cy="11" r="3.5" stroke="var(--accent-text)" strokeWidth="2.2" fill="none" />
         </svg>
       </div>
-      <span className="font-pixel font-extrabold text-[17px] tracking-tight">
+      <span className="font-pixel font-extrabold text-[17px] tracking-tight text-text-primary">
         Loka<span className="text-accent">UI</span>
       </span>
       <span className="font-mono text-[10px] font-semibold px-1.5 py-0.5 rounded bg-accent-muted text-accent tracking-wide">
