@@ -1,60 +1,18 @@
-import { useState } from 'react'
-
-export default function ButtonPreview() {
-  const [active, setActive] = useState(null)
-
-  const buttons = [
-    {
-      label: 'Primary',
-      style: {
-        background: 'var(--accent)',
-        color: 'var(--accent-text)',
-        border: 'none',
-      },
-      hoverBg: 'var(--accent-hover)',
-    },
-    {
-      label: 'Secondary',
-      style: {
-        background: 'var(--bg-elevated)',
-        color: 'var(--text-primary)',
-        border: '1px solid var(--border)',
-      },
-      hoverBg: 'var(--bg-hover)',
-    },
-    {
-      label: 'Ghost',
-      style: {
-        background: 'transparent',
-        color: 'var(--text-secondary)',
-        border: '1px solid transparent',
-      },
-      hoverBg: 'var(--bg-hover)',
-    },
-  ]
+export default function ButtonPreview({ variant = 'primary', size = 'md', disabled = false, loading = false }) {
+  const base = 'inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-colors cursor-pointer border border-transparent disabled:opacity-50 disabled:cursor-not-allowed'
+  const variants = {
+    primary: 'bg-accent text-white hover:bg-accent-hover',
+    secondary: 'bg-transparent border-border text-text-primary hover:bg-bg-hover',
+    ghost: 'bg-transparent text-text-primary hover:bg-bg-hover',
+  }
+  const sizes = { sm: 'px-3 py-1.5 text-xs', md: 'px-4 py-2 text-sm', lg: 'px-6 py-2.5 text-base' }
 
   return (
-    <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
-      {buttons.map(b => (
-        <button
-          key={b.label}
-          onMouseDown={() => setActive(b.label)}
-          onMouseUp={() => setActive(null)}
-          onMouseLeave={() => setActive(null)}
-          style={{
-            ...b.style,
-            padding: '8px 16px',
-            borderRadius: 8,
-            fontSize: 12,
-            fontWeight: 600,
-            cursor: 'pointer',
-            transition: 'transform 0.2s ease, background 0.2s ease',
-            transform: active === b.label ? 'scale(0.96)' : 'scale(1)',
-          }}
-        >
-          {b.label}
-        </button>
-      ))}
+    <div className="flex flex-wrap gap-3 items-center justify-center">
+      <button className={`${base} ${variants[variant]} ${sizes[size]}`} disabled={disabled || loading}>
+        {loading && <span className="w-[1em] h-[1em] border-2 border-current border-r-transparent rounded-full animate-spin" />}
+        {variant.charAt(0).toUpperCase() + variant.slice(1)}
+      </button>
     </div>
   )
 }
