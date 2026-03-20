@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { EtheralShadow } from './ui/etheral-shadow'
 
 export default function Hero() {
   const [copied, setCopied] = useState(false)
@@ -16,18 +17,15 @@ export default function Hero() {
       className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
       style={{ padding: '120px clamp(16px, 4vw, 48px) 80px' }}
     >
-      {/* Ambient glow orbs */}
-      <div
-        className="absolute top-[10%] left-[20%] w-125 h-125 rounded-full pointer-events-none animate-glow"
-        style={{ background: 'radial-gradient(circle, var(--glow) 0%, transparent 70%)' }}
-      />
-      <div
-        className="absolute top-[30%] right-[15%] w-100 h-100 rounded-full pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle, rgba(14,165,142,0.04) 0%, transparent 70%)',
-          animation: 'loka-glow 5s ease-in-out infinite 1s',
-        }}
-      />
+      {/* Animated ethereal shadow background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <EtheralShadow
+          color="rgba(14, 165, 142, 0.15)"
+          animation={{ scale: 80, speed: 60 }}
+          noise={{ opacity: 0.6, scale: 1.2 }}
+          sizing="fill"
+        />
+      </div>
 
       {/* Announcement badge */}
       <div
