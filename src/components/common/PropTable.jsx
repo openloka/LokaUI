@@ -22,11 +22,11 @@ export default function PropTable({ propDefs = [] }) {
           <tbody>
             {propDefs.map((prop) => (
               <tr key={prop.name} className="border-b border-border last:border-b-0">
-                <td className="px-4 py-2 font-mono text-red-400">{prop.name}</td>
-                <td className="px-4 py-2 font-mono text-amber-400">
+                <td className="px-4 py-2 font-mono text-code-red">{prop.name}</td>
+                <td className="px-4 py-2 font-mono text-code-amber">
                   {prop.type === 'enum' ? prop.options?.join(' | ') : prop.type}
                 </td>
-                <td className="px-4 py-2 font-mono text-green-400">
+                <td className="px-4 py-2 font-mono text-code-green">
                   {prop.default != null ? String(prop.default) : '—'}
                 </td>
                 <td className="px-4 py-2 text-text-muted">{prop.description ?? ''}</td>

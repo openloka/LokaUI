@@ -42,6 +42,9 @@
   --color-toggle-bg: var(--toggle-bg);
   --color-toggle-knob: var(--toggle-knob);
   --color-code-bg: var(--code-bg);
+  --color-code-red: var(--code-red);
+  --color-code-amber: var(--code-amber);
+  --color-code-green: var(--code-green);
 
   --animate-spin-slow: loka-spin 1s linear infinite;
   --animate-marquee: loka-marquee 30s linear infinite;
@@ -91,6 +94,9 @@
   --toggle-bg: rgba(255,255,255,0.08);
   --toggle-knob: #fff;
   --code-bg: rgba(255,255,255,0.04);
+  --code-red: #f87171;
+  --code-amber: #fbbf24;
+  --code-green: #4ade80;
 }
 
 html {

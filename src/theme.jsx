@@ -33,6 +33,9 @@ const darkTokens = {
   '--toggle-bg': 'rgba(255,255,255,0.08)',
   '--toggle-knob': '#fff',
   '--code-bg': 'rgba(255,255,255,0.04)',
+  '--code-red': '#f87171',
+  '--code-amber': '#fbbf24',
+  '--code-green': '#4ade80',
 }
 
 const lightTokens = {
@@ -68,6 +71,9 @@ const lightTokens = {
   '--toggle-bg': 'rgba(0,0,0,0.08)',
   '--toggle-knob': '#fff',
   '--code-bg': 'rgba(0,0,0,0.04)',
+  '--code-red': '#dc2626',
+  '--code-amber': '#d97706',
+  '--code-green': '#16a34a',
 }
 
 const STORAGE_KEY = 'lokaui-theme'
