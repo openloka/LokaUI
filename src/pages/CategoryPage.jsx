@@ -66,7 +66,7 @@ function ComponentDocPage({ info, variants, platforms, PreviewComponent, categor
       <p className="text-text-secondary text-sm mb-4">{info.description}</p>
       <CliInstallation componentName={info.name.toLowerCase()} />
       <div className="mt-4">
-        <CodeExample variants={variants} platforms={platforms} preview={PreviewComponent} componentProps={currentProps} onResetProps={resetProps} />
+        <CodeExample usage={info.usage || {}} platforms={platforms} preview={PreviewComponent} componentProps={currentProps} onResetProps={resetProps} />
       </div>
       <div className="mt-4 border border-border rounded-xl overflow-hidden bg-bg-card">
         <PropsPlayground propDefs={info.props} currentProps={currentProps} onUpdate={updateProp} />

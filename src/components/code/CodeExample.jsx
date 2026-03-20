@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import {
   EyeIcon,
   CodeBracketIcon,
@@ -23,13 +23,13 @@ function deriveVariantKey(platform, lang, style) {
 
 function getLangForHighlighter(platform, lang) {
   if (platform === 'laravel') return 'php'
-  if (platform === 'react-native') return 'jsx'
+  if (platform === 'react-native') return 'tsx'
   return lang === 'ts' ? 'tsx' : 'jsx'
 }
 
 export default function CodeExample({
-  variants = {},
   platforms = {},
+  usage = {},
   preview: PreviewComponent,
   componentProps = {},
   onResetProps,
@@ -38,28 +38,10 @@ export default function CodeExample({
   const [platform, setPlatform] = useState(platformKeys[0] || 'react')
   const [lang, setLang] = useState('js')
   const [style, setStyle] = useState('tw')
-  const [code, setCode] = useState('')
   const [copied, setCopied] = useState(false)
 
   const variantKey = deriveVariantKey(platform, lang, style)
-
-  useEffect(() => {
-    let cancelled = false
-    const loader = variants[variantKey]
-    if (!loader) {
-      setCode(`// Variant "${variantKey}" not available`)
-      return
-    }
-    loader()
-      .then((mod) => {
-        if (cancelled) return
-        setCode(mod.default || mod)
-      })
-      .catch(() => {
-        if (!cancelled) setCode(`// Failed to load variant "${variantKey}"`)
-      })
-    return () => { cancelled = true }
-  }, [variantKey, variants])
+  const code = usage[variantKey] || `// Usage example for "${variantKey}" coming soon`
 
   const handleCopy = useCallback(async () => {
     await navigator.clipboard.writeText(code)
