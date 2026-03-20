@@ -46,6 +46,7 @@ function ComponentDocPage({ info, variants, platforms, PreviewComponent, categor
   const defaultProps = {}
   info.props.forEach((p) => { defaultProps[p.name] = p.default })
   const { props: currentProps, updateProp, resetProps } = useComponentProps(defaultProps)
+  const [platform, setPlatform] = useState(Object.keys(platforms)[0] || 'react')
 
   const statusColors = {
     stable: 'text-status-green border-status-green/30 bg-status-green-muted',
@@ -64,9 +65,9 @@ function ComponentDocPage({ info, variants, platforms, PreviewComponent, categor
         </div>
       </div>
       <p className="text-text-secondary text-sm mb-4">{info.description}</p>
-      <CliInstallation componentName={info.name.toLowerCase()} />
+      <CliInstallation componentName={info.name.toLowerCase()} platform={platform} />
       <div className="mt-4">
-        <CodeExample usage={info.usage || {}} platforms={platforms} preview={PreviewComponent} componentProps={currentProps} onResetProps={resetProps} />
+        <CodeExample usage={info.usage || {}} platforms={platforms} platform={platform} onPlatformChange={setPlatform} preview={PreviewComponent} componentProps={currentProps} onResetProps={resetProps} />
       </div>
       <div className="mt-4 border border-border rounded-xl overflow-hidden bg-bg-card">
         <PropsPlayground propDefs={info.props} currentProps={currentProps} onUpdate={updateProp} />

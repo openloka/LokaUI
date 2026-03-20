@@ -30,12 +30,13 @@ function getLangForHighlighter(platform, lang) {
 export default function CodeExample({
   platforms = {},
   usage = {},
+  platform = 'react',
+  onPlatformChange,
   preview: PreviewComponent,
   componentProps = {},
   onResetProps,
 }) {
   const platformKeys = Object.keys(platforms)
-  const [platform, setPlatform] = useState(platformKeys[0] || 'react')
   const [lang, setLang] = useState('js')
   const [style, setStyle] = useState('tw')
   const [copied, setCopied] = useState(false)
@@ -57,7 +58,7 @@ export default function CodeExample({
           {platformKeys.map((key) => (
             <button
               key={key}
-              onClick={() => setPlatform(key)}
+              onClick={() => onPlatformChange?.(key)}
               className={`px-4 py-2 text-sm font-medium transition-colors ${
                 platform === key
                   ? 'text-accent border-b-2 border-accent'

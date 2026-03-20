@@ -1,9 +1,16 @@
 import { useState } from 'react'
 import { CommandLineIcon, ClipboardIcon, CheckIcon } from '@heroicons/react/24/outline'
 
-export default function CliInstallation({ componentName }) {
+const PLATFORM_COMMANDS = {
+  react: (name) => `npx shadcn@latest add @lokaui/${name}`,
+  laravel: (name) => `composer require lokaui/blade-${name}`,
+  'react-native': (name) => `npx shadcn@latest add @lokaui/rn-${name}`,
+}
+
+export default function CliInstallation({ componentName, platform = 'react' }) {
   const [copied, setCopied] = useState(false)
-  const command = `npx shadcn@latest add @lokaui/${componentName}`
+  const getCommand = PLATFORM_COMMANDS[platform] || PLATFORM_COMMANDS.react
+  const command = getCommand(componentName)
 
   const handleCopy = async () => {
     await navigator.clipboard.writeText(command)
