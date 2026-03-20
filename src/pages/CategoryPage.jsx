@@ -26,7 +26,7 @@ export default function CategoryPage() {
       previewLoader ? previewLoader() : Promise.resolve(null),
     ]).then(([mod, previewMod]) => {
       setComponentData(mod)
-      if (previewMod) setPreviewComponent(() => previewMod.default)
+      setPreviewComponent(previewMod ? () => previewMod.default : null)
       setLoading(false)
     })
   }, [componentSlug])
