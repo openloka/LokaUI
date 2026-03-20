@@ -40,7 +40,7 @@ export default function SidebarLayout() {
           </Dialog.Portal>
         </Dialog.Root>
 
-        <main className="flex-1 md:ml-64 px-4 sm:px-6 py-8 max-w-5xl">
+        <main className="flex-1 md:ml-64 px-4 sm:px-6 lg:px-10 py-8">
           <Outlet />
         </main>
       </div>
