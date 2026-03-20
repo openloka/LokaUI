@@ -1,9 +1,12 @@
 import { Outlet } from 'react-router-dom'
 import Sidebar from '../navs/Sidebar'
+import SearchDialog from '../common/SearchDialog'
 
 export default function SidebarLayout() {
   return (
-    <div className="flex min-h-screen pt-16">
+    <>
+      <SearchDialog />
+      <div className="flex min-h-screen pt-16">
       <aside className="hidden md:block fixed top-16 left-0 bottom-0 w-64 bg-bg">
         <Sidebar />
       </aside>
@@ -11,5 +14,6 @@ export default function SidebarLayout() {
         <Outlet />
       </main>
     </div>
+    </>
   )
 }
