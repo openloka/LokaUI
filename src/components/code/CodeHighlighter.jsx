@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import { createHighlighter } from 'shiki'
+import { useTheme } from '../../theme'
 
 let highlighterPromise = null
 
 function getHighlighter() {
   if (!highlighterPromise) {
     highlighterPromise = createHighlighter({
-      themes: ['one-dark-pro'],
+      themes: ['one-dark-pro', 'github-light'],
       langs: ['jsx', 'tsx', 'css', 'php', 'bash', 'javascript', 'json'],
     })
   }
@@ -14,17 +15,20 @@ function getHighlighter() {
 }
 
 export default function CodeHighlighter({ code, lang = 'jsx' }) {
+  const { mode } = useTheme()
   const [html, setHtml] = useState('')
+
+  const shikiTheme = mode === 'dark' ? 'one-dark-pro' : 'github-light'
 
   useEffect(() => {
     let cancelled = false
     getHighlighter().then((highlighter) => {
       if (cancelled) return
-      const result = highlighter.codeToHtml(code, { lang, theme: 'one-dark-pro' })
+      const result = highlighter.codeToHtml(code, { lang, theme: shikiTheme })
       setHtml(result)
     })
     return () => { cancelled = true }
-  }, [code, lang])
+  }, [code, lang, shikiTheme])
 
   if (!html) {
     return (
