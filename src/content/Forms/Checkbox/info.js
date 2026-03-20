@@ -4,7 +4,7 @@ export const info = {
   category: 'Forms',
   status: 'stable',
   tags: ['checkbox', 'check', 'form', 'selection'],
-  install: 'npx shadcn@latest add @lokaui/checkbox',
+  install: 'npx @lokaui/cli add checkbox',
   props: [
     { name: 'checked', type: 'boolean', default: false, description: 'Whether the checkbox is checked' },
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the checkbox is disabled' },

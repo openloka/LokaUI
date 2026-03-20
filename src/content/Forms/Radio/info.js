@@ -4,7 +4,7 @@ export const info = {
   category: 'Forms',
   status: 'stable',
   tags: ['radio', 'form', 'selection', 'option'],
-  install: 'npx shadcn@latest add @lokaui/radio',
+  install: 'npx @lokaui/cli add radio',
   props: [
     { name: 'checked', type: 'boolean', default: false, description: 'Whether the radio button is selected' },
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the radio button is disabled' },

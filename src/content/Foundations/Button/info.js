@@ -4,7 +4,7 @@ export const info = {
   category: 'Foundations',
   status: 'stable',
   tags: ['button', 'action', 'click', 'submit'],
-  install: 'npx shadcn@latest add @lokaui/button',
+  install: 'npx @lokaui/cli add button',
   props: [
     { name: 'variant', type: 'enum', options: ['primary', 'secondary', 'ghost'], default: 'primary', description: 'Visual style of the button' },
     { name: 'size', type: 'enum', options: ['sm', 'md', 'lg'], default: 'md', description: 'Size of the button' },

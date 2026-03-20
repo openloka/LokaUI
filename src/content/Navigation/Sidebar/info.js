@@ -4,7 +4,7 @@ export const info = {
   category: 'Navigation',
   status: 'stable',
   tags: ['sidebar', 'navigation', 'menu', 'panel'],
-  install: 'npx shadcn@latest add @lokaui/sidebar',
+  install: 'npx @lokaui/cli add sidebar',
   props: [
     { name: 'collapsed', type: 'boolean', default: false, description: 'Whether the sidebar is collapsed to icon-only mode' },
     { name: 'width', type: 'enum', options: ['sm', 'md', 'lg'], default: 'md', description: 'Width of the sidebar' },

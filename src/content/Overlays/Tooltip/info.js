@@ -4,7 +4,7 @@ export const info = {
   category: 'Overlays',
   status: 'stable',
   tags: ['tooltip', 'hover', 'popup', 'info'],
-  install: 'npx shadcn@latest add @lokaui/tooltip',
+  install: 'npx @lokaui/cli add tooltip',
   props: [
     { name: 'content', type: 'string', default: '', description: 'Text content displayed in the tooltip' },
     { name: 'side', type: 'enum', options: ['top', 'bottom', 'left', 'right'], default: 'top', description: 'Position of the tooltip relative to the trigger' },

@@ -4,7 +4,7 @@ export const info = {
   category: 'Overlays',
   status: 'stable',
   tags: ['drawer', 'panel', 'slide', 'overlay'],
-  install: 'npx shadcn@latest add @lokaui/drawer',
+  install: 'npx @lokaui/cli add drawer',
   props: [
     { name: 'open', type: 'boolean', default: false, description: 'Whether the drawer is visible' },
     { name: 'side', type: 'enum', options: ['left', 'right'], default: 'right', description: 'Which side the drawer slides from' },

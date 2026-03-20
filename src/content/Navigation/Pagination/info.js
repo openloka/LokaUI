@@ -4,7 +4,7 @@ export const info = {
   category: 'Navigation',
   status: 'stable',
   tags: ['pagination', 'navigation', 'pages'],
-  install: 'npx shadcn@latest add @lokaui/pagination',
+  install: 'npx @lokaui/cli add pagination',
   props: [
     { name: 'total', type: 'number', default: 10, description: 'Total number of pages' },
     { name: 'current', type: 'number', default: 1, description: 'Currently active page' },

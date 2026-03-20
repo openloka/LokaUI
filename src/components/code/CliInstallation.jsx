@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { CommandLineIcon, ClipboardIcon, CheckIcon } from '@heroicons/react/24/outline'
 
 const PLATFORM_COMMANDS = {
-  react: (name) => `npx shadcn@latest add @lokaui/${name}`,
-  laravel: (name) => `composer require lokaui/blade-${name}`,
-  'react-native': (name) => `npx shadcn@latest add @lokaui/rn-${name}`,
+  react: (name) => `npx @lokaui/cli add ${name}`,
+  laravel: (name) => `php artisan lokaui:add ${name}`,
+  'react-native': (name) => `npx @lokaui/cli add ${name}`,
 }
 
 export default function CliInstallation({ componentName, platform = 'react' }) {

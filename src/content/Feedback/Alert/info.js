@@ -4,7 +4,7 @@ export const info = {
   category: 'Feedback',
   status: 'stable',
   tags: ['alert', 'banner', 'message', 'notification'],
-  install: 'npx shadcn@latest add @lokaui/alert',
+  install: 'npx @lokaui/cli add alert',
   props: [
     { name: 'variant', type: 'enum', options: ['info', 'success', 'warning', 'error'], default: 'info', description: 'Visual style variant of the alert' },
     { name: 'dismissible', type: 'boolean', default: false, description: 'Whether the alert can be dismissed' },

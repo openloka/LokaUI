@@ -4,7 +4,7 @@ export const info = {
   category: 'DataDisplay',
   status: 'stable',
   tags: ['card', 'container', 'panel'],
-  install: 'npx shadcn@latest add @lokaui/card',
+  install: 'npx @lokaui/cli add card',
   props: [
     { name: 'variant', type: 'enum', options: ['default', 'outlined', 'elevated'], default: 'default', description: 'Visual style variant of the card' },
     { name: 'padding', type: 'enum', options: ['sm', 'md', 'lg'], default: 'md', description: 'Internal padding size' },

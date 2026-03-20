@@ -4,7 +4,7 @@ export const info = {
   category: 'Navigation',
   status: 'stable',
   tags: ['breadcrumb', 'navigation', 'path'],
-  install: 'npx shadcn@latest add @lokaui/breadcrumb',
+  install: 'npx @lokaui/cli add breadcrumb',
   props: [
     { name: 'separator', type: 'enum', options: ['chevron', 'slash', 'dot'], default: 'chevron', description: 'Separator character between breadcrumb items' },
   ],

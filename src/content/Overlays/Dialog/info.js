@@ -4,7 +4,7 @@ export const info = {
   category: 'Overlays',
   status: 'stable',
   tags: ['dialog', 'modal', 'overlay', 'popup'],
-  install: 'npx shadcn@latest add @lokaui/dialog',
+  install: 'npx @lokaui/cli add dialog',
   props: [
     { name: 'open', type: 'boolean', default: false, description: 'Whether the dialog is visible' },
     { name: 'title', type: 'string', default: '', description: 'Title text for the dialog header' },

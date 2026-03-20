@@ -4,7 +4,7 @@ export const info = {
   category: 'DataDisplay',
   status: 'stable',
   tags: ['table', 'data', 'grid', 'rows'],
-  install: 'npx shadcn@latest add @lokaui/table',
+  install: 'npx @lokaui/cli add table',
   props: [
     { name: 'striped', type: 'boolean', default: false, description: 'Whether to alternate row background colors' },
     { name: 'bordered', type: 'boolean', default: false, description: 'Whether to show cell borders' },

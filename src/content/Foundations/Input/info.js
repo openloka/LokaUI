@@ -4,7 +4,7 @@ export const info = {
   category: 'Foundations',
   status: 'stable',
   tags: ['input', 'text', 'form', 'field'],
-  install: 'npx shadcn@latest add @lokaui/input',
+  install: 'npx @lokaui/cli add input',
   props: [
     { name: 'type', type: 'enum', options: ['text', 'email', 'password'], default: 'text', description: 'The type of input field' },
     { name: 'placeholder', type: 'string', default: '', description: 'Placeholder text displayed when empty' },

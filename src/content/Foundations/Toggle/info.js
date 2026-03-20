@@ -4,7 +4,7 @@ export const info = {
   category: 'Foundations',
   status: 'stable',
   tags: ['toggle', 'switch', 'on-off'],
-  install: 'npx shadcn@latest add @lokaui/toggle',
+  install: 'npx @lokaui/cli add toggle',
   props: [
     { name: 'checked', type: 'boolean', default: false, description: 'Whether the toggle is on' },
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the toggle is disabled' },

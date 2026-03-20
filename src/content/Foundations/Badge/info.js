@@ -4,7 +4,7 @@ export const info = {
   category: 'Foundations',
   status: 'stable',
   tags: ['badge', 'status', 'label', 'tag'],
-  install: 'npx shadcn@latest add @lokaui/badge',
+  install: 'npx @lokaui/cli add badge',
   props: [
     { name: 'variant', type: 'enum', options: ['default', 'success', 'warning', 'error', 'info'], default: 'default', description: 'Visual style variant of the badge' },
     { name: 'size', type: 'enum', options: ['sm', 'md'], default: 'md', description: 'Size of the badge' },

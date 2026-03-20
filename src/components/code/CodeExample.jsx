@@ -35,14 +35,17 @@ export default function CodeExample({
   preview: PreviewComponent,
   componentProps = {},
   onResetProps,
+  componentName = '',
+  componentCategory = '',
 }) {
   const platformKeys = Object.keys(platforms)
   const [lang, setLang] = useState('js')
   const [style, setStyle] = useState('tw')
   const [copied, setCopied] = useState(false)
 
-  const variantKey = deriveVariantKey(platform, lang, style)
-  const code = usage[variantKey] || `// Usage example for "${variantKey}" coming soon`
+  const isComingSoon = platforms[platform] === null
+  const variantKey = isComingSoon ? null : deriveVariantKey(platform, lang, style)
+  const code = isComingSoon ? '' : (usage[variantKey] || `// Usage example for "${variantKey}" coming soon`)
 
   const handleCopy = useCallback(async () => {
     await navigator.clipboard.writeText(code)
@@ -106,30 +109,53 @@ export default function CodeExample({
                 Code
               </span>
             </div>
-            <div className="flex items-center gap-2">
-              <CodeOptions
-                platform={platform}
-                lang={lang}
-                style={style}
-                onLangChange={setLang}
-                onStyleChange={setStyle}
-              />
-              <button
-                onClick={handleCopy}
-                className="text-text-secondary hover:text-accent transition-colors"
-                aria-label={copied ? 'Copied' : 'Copy code'}
+            {!isComingSoon && (
+              <div className="flex items-center gap-2">
+                <CodeOptions
+                  platform={platform}
+                  lang={lang}
+                  style={style}
+                  onLangChange={setLang}
+                  onStyleChange={setStyle}
+                />
+                <button
+                  onClick={handleCopy}
+                  className="text-text-secondary hover:text-accent transition-colors"
+                  aria-label={copied ? 'Copied' : 'Copy code'}
+                >
+                  {copied ? (
+                    <CheckIcon className="h-4 w-4 text-green-400" />
+                  ) : (
+                    <ClipboardIcon className="h-4 w-4" />
+                  )}
+                </button>
+              </div>
+            )}
+          </div>
+          {isComingSoon ? (
+            <div className="flex flex-col items-center justify-center gap-3 p-10 text-center">
+              <span className="text-2xl">🚧</span>
+              <p className="text-sm font-medium text-text-primary">
+                Coming soon for {PLATFORM_LABELS[platform]}
+              </p>
+              <p className="text-xs text-text-secondary max-w-xs">
+                This component is not yet available for {PLATFORM_LABELS[platform]}.
+                Want to contribute?
+              </p>
+              <a
+                href="https://github.com/openloka/LokaUI"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-accent hover:text-accent-hover transition-colors"
               >
-                {copied ? (
-                  <CheckIcon className="h-4 w-4 text-green-400" />
-                ) : (
-                  <ClipboardIcon className="h-4 w-4" />
-                )}
-              </button>
+                github.com/openloka/LokaUI
+              </a>
             </div>
-          </div>
-          <div className="bg-code-bg max-h-[500px] overflow-auto">
-            <CodeHighlighter code={code} lang={getLangForHighlighter(platform, lang)} />
-          </div>
+          ) : (
+            <div className="bg-code-bg max-h-[500px] overflow-auto">
+              <CodeHighlighter code={code} lang={getLangForHighlighter(platform, lang)} />
+            </div>
+          )}
         </div>
       </div>
     </div>

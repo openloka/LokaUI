@@ -4,7 +4,7 @@ export const info = {
   category: 'Overlays',
   status: 'stable',
   tags: ['popover', 'floating', 'dropdown', 'overlay'],
-  install: 'npx shadcn@latest add @lokaui/popover',
+  install: 'npx @lokaui/cli add popover',
   props: [
     { name: 'open', type: 'boolean', default: false, description: 'Whether the popover is visible' },
     { name: 'side', type: 'enum', options: ['top', 'bottom', 'left', 'right'], default: 'bottom', description: 'Position of the popover relative to the trigger' },

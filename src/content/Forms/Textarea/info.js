@@ -4,7 +4,7 @@ export const info = {
   category: 'Forms',
   status: 'stable',
   tags: ['textarea', 'text', 'form', 'multiline'],
-  install: 'npx shadcn@latest add @lokaui/textarea',
+  install: 'npx @lokaui/cli add textarea',
   props: [
     { name: 'placeholder', type: 'string', default: '', description: 'Placeholder text displayed when empty' },
     { name: 'rows', type: 'number', default: 4, description: 'Number of visible text rows' },

@@ -1,0 +1,573 @@
+{
+  "version": "0.1.0",
+  "components": {
+    "badge": {
+      "name": "Badge",
+      "category": "Foundations",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Badge.jsx"
+          ],
+          "JS-TW": [
+            "react/Badge.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Badge.tsx"
+          ],
+          "TS-TW": [
+            "react/Badge.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "button": {
+      "name": "Button",
+      "category": "Foundations",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Button.jsx",
+            "react/Button.css"
+          ],
+          "JS-TW": [
+            "react/Button.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Button.tsx",
+            "react/Button.css"
+          ],
+          "TS-TW": [
+            "react/Button.tw.tsx"
+          ]
+        },
+        "laravel": {
+          "HTML-TW": [
+            "laravel/button.blade.php"
+          ]
+        },
+        "react-native": {
+          "RN-TW": [
+            "react-native/Button.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Button.stylesheet.tsx"
+          ]
+        }
+      }
+    },
+    "input": {
+      "name": "Input",
+      "category": "Foundations",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Input.jsx"
+          ],
+          "JS-TW": [
+            "react/Input.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Input.tsx"
+          ],
+          "TS-TW": [
+            "react/Input.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "toggle": {
+      "name": "Toggle",
+      "category": "Foundations",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Toggle.jsx"
+          ],
+          "JS-TW": [
+            "react/Toggle.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Toggle.tsx"
+          ],
+          "TS-TW": [
+            "react/Toggle.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "dialog": {
+      "name": "Dialog",
+      "category": "Overlays",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Dialog.jsx"
+          ],
+          "JS-TW": [
+            "react/Dialog.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Dialog.tsx"
+          ],
+          "TS-TW": [
+            "react/Dialog.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "drawer": {
+      "name": "Drawer",
+      "category": "Overlays",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Drawer.jsx"
+          ],
+          "JS-TW": [
+            "react/Drawer.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Drawer.tsx"
+          ],
+          "TS-TW": [
+            "react/Drawer.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "popover": {
+      "name": "Popover",
+      "category": "Overlays",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Popover.jsx"
+          ],
+          "JS-TW": [
+            "react/Popover.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Popover.tsx"
+          ],
+          "TS-TW": [
+            "react/Popover.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "tooltip": {
+      "name": "Tooltip",
+      "category": "Overlays",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Tooltip.jsx"
+          ],
+          "JS-TW": [
+            "react/Tooltip.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Tooltip.tsx"
+          ],
+          "TS-TW": [
+            "react/Tooltip.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "avatar": {
+      "name": "Avatar",
+      "category": "DataDisplay",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Avatar.jsx"
+          ],
+          "JS-TW": [
+            "react/Avatar.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Avatar.tsx"
+          ],
+          "TS-TW": [
+            "react/Avatar.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "card": {
+      "name": "Card",
+      "category": "DataDisplay",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Card.jsx"
+          ],
+          "JS-TW": [
+            "react/Card.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Card.tsx"
+          ],
+          "TS-TW": [
+            "react/Card.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "progress": {
+      "name": "Progress",
+      "category": "DataDisplay",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Progress.jsx"
+          ],
+          "JS-TW": [
+            "react/Progress.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Progress.tsx"
+          ],
+          "TS-TW": [
+            "react/Progress.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "table": {
+      "name": "Table",
+      "category": "DataDisplay",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Table.jsx"
+          ],
+          "JS-TW": [
+            "react/Table.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Table.tsx"
+          ],
+          "TS-TW": [
+            "react/Table.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "breadcrumb": {
+      "name": "Breadcrumb",
+      "category": "Navigation",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Breadcrumb.jsx"
+          ],
+          "JS-TW": [
+            "react/Breadcrumb.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Breadcrumb.tsx"
+          ],
+          "TS-TW": [
+            "react/Breadcrumb.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "pagination": {
+      "name": "Pagination",
+      "category": "Navigation",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Pagination.jsx"
+          ],
+          "JS-TW": [
+            "react/Pagination.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Pagination.tsx"
+          ],
+          "TS-TW": [
+            "react/Pagination.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "sidebar": {
+      "name": "Sidebar",
+      "category": "Navigation",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Sidebar.jsx"
+          ],
+          "JS-TW": [
+            "react/Sidebar.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Sidebar.tsx"
+          ],
+          "TS-TW": [
+            "react/Sidebar.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "tabs": {
+      "name": "Tabs",
+      "category": "Navigation",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Tabs.jsx"
+          ],
+          "JS-TW": [
+            "react/Tabs.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Tabs.tsx"
+          ],
+          "TS-TW": [
+            "react/Tabs.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "checkbox": {
+      "name": "Checkbox",
+      "category": "Forms",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Checkbox.jsx"
+          ],
+          "JS-TW": [
+            "react/Checkbox.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Checkbox.tsx"
+          ],
+          "TS-TW": [
+            "react/Checkbox.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "radio": {
+      "name": "Radio",
+      "category": "Forms",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Radio.jsx"
+          ],
+          "JS-TW": [
+            "react/Radio.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Radio.tsx"
+          ],
+          "TS-TW": [
+            "react/Radio.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "select": {
+      "name": "Select",
+      "category": "Forms",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Select.jsx"
+          ],
+          "JS-TW": [
+            "react/Select.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Select.tsx"
+          ],
+          "TS-TW": [
+            "react/Select.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "textarea": {
+      "name": "Textarea",
+      "category": "Forms",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Textarea.jsx"
+          ],
+          "JS-TW": [
+            "react/Textarea.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Textarea.tsx"
+          ],
+          "TS-TW": [
+            "react/Textarea.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "alert": {
+      "name": "Alert",
+      "category": "Feedback",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Alert.jsx"
+          ],
+          "JS-TW": [
+            "react/Alert.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Alert.tsx"
+          ],
+          "TS-TW": [
+            "react/Alert.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "skeleton": {
+      "name": "Skeleton",
+      "category": "Feedback",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Skeleton.jsx"
+          ],
+          "JS-TW": [
+            "react/Skeleton.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Skeleton.tsx"
+          ],
+          "TS-TW": [
+            "react/Skeleton.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "spinner": {
+      "name": "Spinner",
+      "category": "Feedback",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Spinner.jsx"
+          ],
+          "JS-TW": [
+            "react/Spinner.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Spinner.tsx"
+          ],
+          "TS-TW": [
+            "react/Spinner.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    },
+    "toast": {
+      "name": "Toast",
+      "category": "Feedback",
+      "status": "stable",
+      "platforms": {
+        "react": {
+          "JS-CSS": [
+            "react/Toast.jsx"
+          ],
+          "JS-TW": [
+            "react/Toast.tw.jsx"
+          ],
+          "TS-CSS": [
+            "react/Toast.tsx"
+          ],
+          "TS-TW": [
+            "react/Toast.tw.tsx"
+          ]
+        },
+        "laravel": null,
+        "react-native": null
+      }
+    }
+  },
+  "tokens": {
+    "css": "tokens/tokens.css"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@lokaui/cli",
+  "version": "0.1.0",
+  "description": "CLI to add LokaUI components to your project",
+  "type": "module",
+  "bin": {
+    "lokaui": "./bin/lokaui.js"
+  },
+  "files": ["bin", "src"],
+  "dependencies": {
+    "commander": "^12.1.0",
+    "@clack/prompts": "^0.9.1",
+    "picocolors": "^1.1.1"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openloka/LokaUI"
+  }
+}

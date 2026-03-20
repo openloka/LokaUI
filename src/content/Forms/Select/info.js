@@ -4,7 +4,7 @@ export const info = {
   category: 'Forms',
   status: 'stable',
   tags: ['select', 'dropdown', 'picker', 'form'],
-  install: 'npx shadcn@latest add @lokaui/select',
+  install: 'npx @lokaui/cli add select',
   props: [
     { name: 'placeholder', type: 'string', default: 'Select...', description: 'Placeholder text when no option is selected' },
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the select is disabled' },

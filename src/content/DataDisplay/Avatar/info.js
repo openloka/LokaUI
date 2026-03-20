@@ -4,7 +4,7 @@ export const info = {
   category: 'DataDisplay',
   status: 'stable',
   tags: ['avatar', 'user', 'image', 'profile'],
-  install: 'npx shadcn@latest add @lokaui/avatar',
+  install: 'npx @lokaui/cli add avatar',
   props: [
     { name: 'size', type: 'enum', options: ['sm', 'md', 'lg'], default: 'md', description: 'Size of the avatar' },
     { name: 'src', type: 'string', default: '', description: 'Image source URL' },

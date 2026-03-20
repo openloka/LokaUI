@@ -4,7 +4,7 @@ export const info = {
   category: 'Navigation',
   status: 'stable',
   tags: ['tabs', 'navigation', 'panels'],
-  install: 'npx shadcn@latest add @lokaui/tabs',
+  install: 'npx @lokaui/cli add tabs',
   props: [
     { name: 'defaultValue', type: 'string', default: '', description: 'The initially active tab value' },
     { name: 'variant', type: 'enum', options: ['default', 'pills', 'underline'], default: 'default', description: 'Visual style variant of the tabs' },

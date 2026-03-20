@@ -6,7 +6,9 @@ export const variants = {
 }
 
 export const platforms = {
-  react: ['JS-CSS', 'JS-TW', 'TS-CSS', 'TS-TW'],
+  react:          ['JS-CSS', 'JS-TW', 'TS-CSS', 'TS-TW'],
+  laravel:        null,
+  'react-native': null,
 }
 
 export { info } from './info'

@@ -4,7 +4,7 @@ export const info = {
   category: 'Feedback',
   status: 'stable',
   tags: ['toast', 'notification', 'alert', 'snackbar'],
-  install: 'npx shadcn@latest add @lokaui/toast',
+  install: 'npx @lokaui/cli add toast',
   props: [
     { name: 'variant', type: 'enum', options: ['default', 'success', 'error', 'warning'], default: 'default', description: 'Visual style variant of the toast' },
     { name: 'duration', type: 'number', default: 3000, description: 'Duration in milliseconds before auto-dismiss' },

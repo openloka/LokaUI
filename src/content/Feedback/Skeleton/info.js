@@ -4,7 +4,7 @@ export const info = {
   category: 'Feedback',
   status: 'stable',
   tags: ['skeleton', 'loading', 'placeholder'],
-  install: 'npx shadcn@latest add @lokaui/skeleton',
+  install: 'npx @lokaui/cli add skeleton',
   props: [
     { name: 'variant', type: 'enum', options: ['text', 'circular', 'rectangular'], default: 'text', description: 'Shape variant of the skeleton' },
     { name: 'width', type: 'string', default: '100%', description: 'Width of the skeleton element' },

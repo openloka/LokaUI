@@ -4,7 +4,7 @@ export const info = {
   category: 'Feedback',
   status: 'stable',
   tags: ['spinner', 'loading', 'indicator'],
-  install: 'npx shadcn@latest add @lokaui/spinner',
+  install: 'npx @lokaui/cli add spinner',
   props: [
     { name: 'size', type: 'enum', options: ['sm', 'md', 'lg'], default: 'md', description: 'Size of the spinner' },
     { name: 'color', type: 'enum', options: ['accent', 'white', 'current'], default: 'accent', description: 'Color of the spinner' },
