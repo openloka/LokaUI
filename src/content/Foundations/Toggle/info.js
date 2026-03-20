@@ -10,18 +10,30 @@ export const info = {
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the toggle is disabled' },
     { name: 'label', type: 'string', default: '', description: 'Label text for the toggle' },
   ],
-  usage: {
-    'JS-CSS': `import Toggle from './components/ui/Toggle'
-
-<Toggle label="Notifications" checked={true} onChange={() => {}} />`,
-    'JS-TW': `import Toggle from './components/ui/Toggle'
-
-<Toggle label="Notifications" checked={true} onChange={() => {}} />`,
-    'TS-CSS': `import Toggle from './components/ui/Toggle'
-
-<Toggle label="Notifications" checked={true} onChange={() => {}} />`,
-    'TS-TW': `import Toggle from './components/ui/Toggle'
-
-<Toggle label="Notifications" checked={true} onChange={() => {}} />`,
-  },
+  sections: [
+    {
+      id: 'basic',
+      title: 'Basic',
+      description: 'A simple toggle switch for binary choices.',
+      code: `import Toggle from './components/ui/Toggle'\n\n<Toggle label="Notifications" />`,
+      previews: [{}],
+    },
+    {
+      id: 'checked',
+      title: 'Checked',
+      description: 'Set checked to control the toggle state.',
+      code: `<Toggle checked={true} label="Enabled" />\n<Toggle checked={false} label="Disabled" />`,
+      previews: [
+        { checked: true, label: 'Enabled' },
+        { checked: false, label: 'Disabled' },
+      ],
+    },
+    {
+      id: 'disabled',
+      title: 'Disabled',
+      description: 'Set disabled to prevent user interaction.',
+      code: `<Toggle disabled label="Disabled toggle" />`,
+      previews: [{ disabled: true, label: 'Disabled toggle' }],
+    },
+  ],
 }

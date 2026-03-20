@@ -10,22 +10,24 @@ export const info = {
     { name: 'width', type: 'string', default: '100%', description: 'Width of the skeleton element' },
     { name: 'height', type: 'string', default: '1rem', description: 'Height of the skeleton element' },
   ],
-  usage: {
-    'JS-CSS': `import Skeleton from './components/ui/Skeleton'
-
-<Skeleton variant="text" width="200px" />
-<Skeleton variant="circular" width="40px" height="40px" />`,
-    'JS-TW': `import Skeleton from './components/ui/Skeleton'
-
-<Skeleton variant="text" width="200px" />
-<Skeleton variant="circular" width="40px" height="40px" />`,
-    'TS-CSS': `import Skeleton from './components/ui/Skeleton'
-
-<Skeleton variant="text" width="200px" />
-<Skeleton variant="circular" width="40px" height="40px" />`,
-    'TS-TW': `import Skeleton from './components/ui/Skeleton'
-
-<Skeleton variant="text" width="200px" />
-<Skeleton variant="circular" width="40px" height="40px" />`,
-  },
+  sections: [
+    {
+      id: 'basic',
+      title: 'Basic',
+      description: 'A simple skeleton placeholder for loading states.',
+      code: `import Skeleton from './components/ui/Skeleton'\n\n<Skeleton width="200px" />`,
+      previews: [{}],
+    },
+    {
+      id: 'variant',
+      title: 'Variant',
+      description: 'Use the variant prop to change the skeleton shape.',
+      code: `<Skeleton variant="text" width="200px" />\n<Skeleton variant="circular" width="40px" height="40px" />\n<Skeleton variant="rectangular" width="200px" height="100px" />`,
+      previews: [
+        { variant: 'text', width: '200px' },
+        { variant: 'circular', width: '40px', height: '40px' },
+        { variant: 'rectangular', width: '200px', height: '100px' },
+      ],
+    },
+  ],
 }

@@ -10,30 +10,31 @@ export const info = {
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the select is disabled' },
     { name: 'size', type: 'enum', options: ['sm', 'md', 'lg'], default: 'md', description: 'Size of the select control' },
   ],
-  usage: {
-    'JS-CSS': `import { Select, SelectOption } from './components/ui/Select'
-
-<Select placeholder="Choose a fruit">
-  <SelectOption value="apple">Apple</SelectOption>
-  <SelectOption value="banana">Banana</SelectOption>
-</Select>`,
-    'JS-TW': `import { Select, SelectOption } from './components/ui/Select'
-
-<Select placeholder="Choose a fruit">
-  <SelectOption value="apple">Apple</SelectOption>
-  <SelectOption value="banana">Banana</SelectOption>
-</Select>`,
-    'TS-CSS': `import { Select, SelectOption } from './components/ui/Select'
-
-<Select placeholder="Choose a fruit">
-  <SelectOption value="apple">Apple</SelectOption>
-  <SelectOption value="banana">Banana</SelectOption>
-</Select>`,
-    'TS-TW': `import { Select, SelectOption } from './components/ui/Select'
-
-<Select placeholder="Choose a fruit">
-  <SelectOption value="apple">Apple</SelectOption>
-  <SelectOption value="banana">Banana</SelectOption>
-</Select>`,
-  },
+  sections: [
+    {
+      id: 'basic',
+      title: 'Basic',
+      description: 'A simple dropdown selector for choosing an option.',
+      code: `import { Select, SelectOption } from './components/ui/Select'\n\n<Select placeholder="Choose a fruit">\n  <SelectOption value="apple">Apple</SelectOption>\n  <SelectOption value="banana">Banana</SelectOption>\n</Select>`,
+      previews: [{}],
+    },
+    {
+      id: 'size',
+      title: 'Size',
+      description: 'Use the size prop to change the select control size.',
+      code: `<Select size="sm">...</Select>\n<Select size="md">...</Select>\n<Select size="lg">...</Select>`,
+      previews: [
+        { size: 'sm' },
+        { size: 'md' },
+        { size: 'lg' },
+      ],
+    },
+    {
+      id: 'disabled',
+      title: 'Disabled',
+      description: 'Set disabled to prevent user interaction.',
+      code: `<Select disabled placeholder="Disabled select">...</Select>`,
+      previews: [{ disabled: true, placeholder: 'Disabled select' }],
+    },
+  ],
 }

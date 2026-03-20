@@ -10,26 +10,27 @@ export const info = {
     { name: 'title', type: 'string', default: '', description: 'Title text for the dialog header' },
     { name: 'onClose', type: '() => void', default: '', description: 'Callback when the dialog is closed' },
   ],
-  usage: {
-    'JS-CSS': `import Dialog from './components/ui/Dialog'
-
-<Dialog open={isOpen} title="Confirm" onClose={() => setOpen(false)}>
-  <p>Are you sure?</p>
-</Dialog>`,
-    'JS-TW': `import Dialog from './components/ui/Dialog'
-
-<Dialog open={isOpen} title="Confirm" onClose={() => setOpen(false)}>
-  <p>Are you sure?</p>
-</Dialog>`,
-    'TS-CSS': `import Dialog from './components/ui/Dialog'
-
-<Dialog open={isOpen} title="Confirm" onClose={() => setOpen(false)}>
-  <p>Are you sure?</p>
-</Dialog>`,
-    'TS-TW': `import Dialog from './components/ui/Dialog'
-
-<Dialog open={isOpen} title="Confirm" onClose={() => setOpen(false)}>
-  <p>Are you sure?</p>
-</Dialog>`,
-  },
+  sections: [
+    {
+      id: 'basic',
+      title: 'Basic',
+      description: 'A simple dialog overlay for displaying important content.',
+      code: `import Dialog from './components/ui/Dialog'\n\n<Dialog open={isOpen} onClose={() => setOpen(false)}>\n  <p>Dialog content</p>\n</Dialog>`,
+      previews: [{}],
+    },
+    {
+      id: 'with-title',
+      title: 'With Title',
+      description: 'Use the title prop to add a header to the dialog.',
+      code: `<Dialog open={isOpen} title="Confirm Action" onClose={() => setOpen(false)}>\n  <p>Are you sure?</p>\n</Dialog>`,
+      previews: [{ title: 'Confirm Action', open: true }],
+    },
+    {
+      id: 'controlled',
+      title: 'Controlled',
+      description: 'Use the open prop to control the dialog visibility programmatically.',
+      code: `const [isOpen, setOpen] = useState(false)\n\n<Button onClick={() => setOpen(true)}>Open</Button>\n<Dialog open={isOpen} title="Controlled" onClose={() => setOpen(false)}>\n  <p>Controlled dialog</p>\n</Dialog>`,
+      previews: [{ open: true, title: 'Controlled' }],
+    },
+  ],
 }

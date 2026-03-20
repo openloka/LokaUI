@@ -10,18 +10,23 @@ export const info = {
     { name: 'current', type: 'number', default: 1, description: 'Currently active page' },
     { name: 'siblingCount', type: 'number', default: 1, description: 'Number of sibling pages shown around the current page' },
   ],
-  usage: {
-    'JS-CSS': `import Pagination from './components/ui/Pagination'
-
-<Pagination total={10} current={1} onChange={(page) => {}} />`,
-    'JS-TW': `import Pagination from './components/ui/Pagination'
-
-<Pagination total={10} current={1} onChange={(page) => {}} />`,
-    'TS-CSS': `import Pagination from './components/ui/Pagination'
-
-<Pagination total={10} current={1} onChange={(page) => {}} />`,
-    'TS-TW': `import Pagination from './components/ui/Pagination'
-
-<Pagination total={10} current={1} onChange={(page) => {}} />`,
-  },
+  sections: [
+    {
+      id: 'basic',
+      title: 'Basic',
+      description: 'A simple pagination control for navigating pages.',
+      code: `import Pagination from './components/ui/Pagination'\n\n<Pagination total={10} current={1} onChange={(page) => {}} />`,
+      previews: [{}],
+    },
+    {
+      id: 'sibling-count',
+      title: 'Sibling Count',
+      description: 'Use the siblingCount prop to control how many page numbers appear around the current page.',
+      code: `<Pagination total={20} current={10} siblingCount={1} />\n<Pagination total={20} current={10} siblingCount={2} />`,
+      previews: [
+        { total: 20, current: 10, siblingCount: 1 },
+        { total: 20, current: 10, siblingCount: 2 },
+      ],
+    },
+  ],
 }

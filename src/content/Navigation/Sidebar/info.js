@@ -9,38 +9,20 @@ export const info = {
     { name: 'collapsed', type: 'boolean', default: false, description: 'Whether the sidebar is collapsed to icon-only mode' },
     { name: 'width', type: 'enum', options: ['sm', 'md', 'lg'], default: 'md', description: 'Width of the sidebar' },
   ],
-  usage: {
-    'JS-CSS': `import { Sidebar, SidebarItem, SidebarGroup } from './components/ui/Sidebar'
-
-<Sidebar>
-  <SidebarGroup label="Main">
-    <SidebarItem href="/dashboard">Dashboard</SidebarItem>
-    <SidebarItem href="/settings">Settings</SidebarItem>
-  </SidebarGroup>
-</Sidebar>`,
-    'JS-TW': `import { Sidebar, SidebarItem, SidebarGroup } from './components/ui/Sidebar'
-
-<Sidebar>
-  <SidebarGroup label="Main">
-    <SidebarItem href="/dashboard">Dashboard</SidebarItem>
-    <SidebarItem href="/settings">Settings</SidebarItem>
-  </SidebarGroup>
-</Sidebar>`,
-    'TS-CSS': `import { Sidebar, SidebarItem, SidebarGroup } from './components/ui/Sidebar'
-
-<Sidebar>
-  <SidebarGroup label="Main">
-    <SidebarItem href="/dashboard">Dashboard</SidebarItem>
-    <SidebarItem href="/settings">Settings</SidebarItem>
-  </SidebarGroup>
-</Sidebar>`,
-    'TS-TW': `import { Sidebar, SidebarItem, SidebarGroup } from './components/ui/Sidebar'
-
-<Sidebar>
-  <SidebarGroup label="Main">
-    <SidebarItem href="/dashboard">Dashboard</SidebarItem>
-    <SidebarItem href="/settings">Settings</SidebarItem>
-  </SidebarGroup>
-</Sidebar>`,
-  },
+  sections: [
+    {
+      id: 'basic',
+      title: 'Basic',
+      description: 'A simple vertical sidebar for navigation.',
+      code: `import { Sidebar, SidebarItem, SidebarGroup } from './components/ui/Sidebar'\n\n<Sidebar>\n  <SidebarGroup label="Main">\n    <SidebarItem href="/dashboard">Dashboard</SidebarItem>\n    <SidebarItem href="/settings">Settings</SidebarItem>\n  </SidebarGroup>\n</Sidebar>`,
+      previews: [{}],
+    },
+    {
+      id: 'collapsed',
+      title: 'Collapsed',
+      description: 'Set collapsed to show icon-only mode.',
+      code: `<Sidebar collapsed>\n  <SidebarItem href="/dashboard">Dashboard</SidebarItem>\n</Sidebar>`,
+      previews: [{ collapsed: true }],
+    },
+  ],
 }

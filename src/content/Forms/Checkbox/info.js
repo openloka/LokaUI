@@ -10,18 +10,30 @@ export const info = {
     { name: 'disabled', type: 'boolean', default: false, description: 'Whether the checkbox is disabled' },
     { name: 'label', type: 'string', default: '', description: 'Label text for the checkbox' },
   ],
-  usage: {
-    'JS-CSS': `import Checkbox from './components/ui/Checkbox'
-
-<Checkbox label="Accept terms" checked={false} onChange={() => {}} />`,
-    'JS-TW': `import Checkbox from './components/ui/Checkbox'
-
-<Checkbox label="Accept terms" checked={false} onChange={() => {}} />`,
-    'TS-CSS': `import Checkbox from './components/ui/Checkbox'
-
-<Checkbox label="Accept terms" checked={false} onChange={() => {}} />`,
-    'TS-TW': `import Checkbox from './components/ui/Checkbox'
-
-<Checkbox label="Accept terms" checked={false} onChange={() => {}} />`,
-  },
+  sections: [
+    {
+      id: 'basic',
+      title: 'Basic',
+      description: 'A simple checkbox for toggling a selection.',
+      code: `import Checkbox from './components/ui/Checkbox'\n\n<Checkbox label="Accept terms" />`,
+      previews: [{}],
+    },
+    {
+      id: 'checked',
+      title: 'Checked',
+      description: 'Set checked to control the checkbox state.',
+      code: `<Checkbox checked={true} label="Checked" />\n<Checkbox checked={false} label="Unchecked" />`,
+      previews: [
+        { checked: true, label: 'Checked' },
+        { checked: false, label: 'Unchecked' },
+      ],
+    },
+    {
+      id: 'disabled',
+      title: 'Disabled',
+      description: 'Set disabled to prevent user interaction.',
+      code: `<Checkbox disabled label="Disabled checkbox" />`,
+      previews: [{ disabled: true, label: 'Disabled checkbox' }],
+    },
+  ],
 }

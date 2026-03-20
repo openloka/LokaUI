@@ -10,26 +10,23 @@ export const info = {
     { name: 'side', type: 'enum', options: ['left', 'right'], default: 'right', description: 'Which side the drawer slides from' },
     { name: 'onClose', type: '() => void', default: '', description: 'Callback when the drawer is closed' },
   ],
-  usage: {
-    'JS-CSS': `import Drawer from './components/ui/Drawer'
-
-<Drawer open={isOpen} side="right" onClose={() => setOpen(false)}>
-  <nav>Menu items</nav>
-</Drawer>`,
-    'JS-TW': `import Drawer from './components/ui/Drawer'
-
-<Drawer open={isOpen} side="right" onClose={() => setOpen(false)}>
-  <nav>Menu items</nav>
-</Drawer>`,
-    'TS-CSS': `import Drawer from './components/ui/Drawer'
-
-<Drawer open={isOpen} side="right" onClose={() => setOpen(false)}>
-  <nav>Menu items</nav>
-</Drawer>`,
-    'TS-TW': `import Drawer from './components/ui/Drawer'
-
-<Drawer open={isOpen} side="right" onClose={() => setOpen(false)}>
-  <nav>Menu items</nav>
-</Drawer>`,
-  },
+  sections: [
+    {
+      id: 'basic',
+      title: 'Basic',
+      description: 'A simple slide-out drawer panel.',
+      code: `import Drawer from './components/ui/Drawer'\n\n<Drawer open={isOpen} onClose={() => setOpen(false)}>\n  <nav>Menu items</nav>\n</Drawer>`,
+      previews: [{}],
+    },
+    {
+      id: 'side',
+      title: 'Side',
+      description: 'Use the side prop to control which edge the drawer slides from.',
+      code: `<Drawer side="left" open={isOpen} onClose={() => setOpen(false)}>\n  Left drawer\n</Drawer>\n<Drawer side="right" open={isOpen} onClose={() => setOpen(false)}>\n  Right drawer\n</Drawer>`,
+      previews: [
+        { side: 'left', open: true },
+        { side: 'right', open: true },
+      ],
+    },
+  ],
 }

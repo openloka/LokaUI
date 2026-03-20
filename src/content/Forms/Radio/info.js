@@ -11,30 +11,23 @@ export const info = {
     { name: 'label', type: 'string', default: '', description: 'Label text for the radio button' },
     { name: 'name', type: 'string', default: '', description: 'Group name for the radio button' },
   ],
-  usage: {
-    'JS-CSS': `import { RadioGroup, Radio } from './components/ui/Radio'
-
-<RadioGroup name="plan" value="pro">
-  <Radio value="free" label="Free" />
-  <Radio value="pro" label="Pro" />
-</RadioGroup>`,
-    'JS-TW': `import { RadioGroup, Radio } from './components/ui/Radio'
-
-<RadioGroup name="plan" value="pro">
-  <Radio value="free" label="Free" />
-  <Radio value="pro" label="Pro" />
-</RadioGroup>`,
-    'TS-CSS': `import { RadioGroup, Radio } from './components/ui/Radio'
-
-<RadioGroup name="plan" value="pro">
-  <Radio value="free" label="Free" />
-  <Radio value="pro" label="Pro" />
-</RadioGroup>`,
-    'TS-TW': `import { RadioGroup, Radio } from './components/ui/Radio'
-
-<RadioGroup name="plan" value="pro">
-  <Radio value="free" label="Free" />
-  <Radio value="pro" label="Pro" />
-</RadioGroup>`,
-  },
+  sections: [
+    {
+      id: 'basic',
+      title: 'Basic',
+      description: 'A simple radio button group for selecting one option.',
+      code: `import { RadioGroup, Radio } from './components/ui/Radio'\n\n<RadioGroup name="plan">\n  <Radio value="free" label="Free" />\n  <Radio value="pro" label="Pro" />\n</RadioGroup>`,
+      previews: [{}],
+    },
+    {
+      id: 'controlled',
+      title: 'Controlled',
+      description: 'Use the checked prop to control the radio button state programmatically.',
+      code: `<RadioGroup name="plan" value={selected} onChange={setSelected}>\n  <Radio value="free" label="Free" />\n  <Radio value="pro" label="Pro" />\n</RadioGroup>`,
+      previews: [
+        { checked: true, label: 'Selected', name: 'demo' },
+        { checked: false, label: 'Unselected', name: 'demo' },
+      ],
+    },
+  ],
 }
