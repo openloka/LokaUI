@@ -133,7 +133,7 @@ public/
 | `/:category/:component` | Component doc page | SidebarLayout |
 | `/favorites` | Saved components | SidebarLayout |
 
-React Router v6 with lazy loading via `React.lazy()` + `Suspense`.
+React Router v6 with lazy loading via `React.lazy()` + `Suspense`. Static `/docs/*` routes are defined before the dynamic `/:category/:component` pattern to avoid route collisions.
 
 ## Sidebar Navigation
 
@@ -302,6 +302,14 @@ Key icon mappings:
 - Breadcrumb separator → `ChevronRightIcon`
 - Favorites → `HeartIcon`
 
+## Search (Cmd+K)
+
+Client-side fuzzy search over `Categories.js` component entries. No server or build-time index needed — the search dialog filters the component registry in-memory using a fuzzy matching utility (similar to react-bits' approach). Matches on component name, category, and tags from `Information.js`.
+
+## Favorites
+
+Users can favorite components via the heart icon in the sidebar. Favorites stored in `localStorage`. The `/favorites` page renders a filtered grid of saved components.
+
 ## Build-time SEO
 
 ### 1. Static Meta Tags (`index.html`)
@@ -345,7 +353,7 @@ Sitemap: https://lokaui.dev/sitemap.xml
 4. **Phase 4**: Build component doc page — split view, variant selector, code highlighter
 5. **Phase 5**: Build interactive props playground with URL sync
 6. **Phase 6**: Create Button component with all 7 variants as reference implementation
-7. **Phase 7**: Port remaining 23 components with 4 React variants each
+7. **Phase 7**: Port remaining 23 components (24 total) with 4 React variants each
 8. **Phase 8**: SEO scripts, registry, CLI support
 9. **Phase 9**: Polish — theme toggle, search, favorites, responsive design
 
