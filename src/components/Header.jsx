@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ThemeToggle from "./common/ThemeToggle";
+import ColorSchemeDropdown from "./common/ColorSchemeDropdown";
 
 function Logo() {
   return (
@@ -97,6 +98,7 @@ export default function Header() {
       </nav>
 
       <div className="flex items-center gap-2.5">
+        <ColorSchemeDropdown />
         <ThemeToggle />
         <Link
           to="/docs/getting-started"
