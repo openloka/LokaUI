@@ -10,6 +10,11 @@
   --color-accent-muted: var(--accent-muted);
   --color-accent-text: var(--accent-text);
 
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-muted: var(--secondary-muted);
+  --color-secondary-text: var(--secondary-text);
+
   --color-bg: var(--bg);
   --color-bg-elevated: var(--bg-elevated);
   --color-bg-hover: var(--bg-hover);
@@ -20,6 +25,7 @@
   --color-border: var(--border);
   --color-border-hover: var(--border-hover);
   --color-border-accent: var(--border-accent);
+  --color-border-secondary: var(--border-secondary);
 
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
@@ -79,6 +85,11 @@
   --accent-hover: #10b99b;
   --accent-muted: rgba(14,165,142,0.12);
   --accent-text: #022c22;
+  --secondary: #6366f1;
+  --secondary-hover: #818cf8;
+  --secondary-muted: rgba(99,102,241,0.12);
+  --secondary-text: #ffffff;
+  --border-secondary: rgba(99,102,241,0.3);
   --green: #22c55e;
   --green-muted: rgba(34,197,94,0.12);
   --amber: #f59e0b;

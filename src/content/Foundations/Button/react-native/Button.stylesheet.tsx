@@ -11,13 +11,13 @@ interface ButtonProps {
 
 const variantStyles = StyleSheet.create({
   primary: { backgroundColor: '#6366f1' },
-  secondary: { backgroundColor: 'transparent', borderWidth: 1, borderColor: '#374151' },
+  secondary: { backgroundColor: '#6366f1' },
   ghost: { backgroundColor: 'transparent' },
 })
 
 const variantTextStyles = StyleSheet.create({
   primary: { color: '#ffffff' },
-  secondary: { color: '#e5e7eb' },
+  secondary: { color: '#ffffff' },
   ghost: { color: '#e5e7eb' },
 })
 

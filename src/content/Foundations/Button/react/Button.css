@@ -21,13 +21,12 @@
 }
 
 .loka-btn--secondary {
-  background-color: transparent;
-  color: var(--text-primary);
-  border-color: var(--border);
+  background-color: var(--secondary);
+  color: var(--secondary-text);
 }
 
 .loka-btn--secondary:hover {
-  background-color: var(--bg-hover);
+  background-color: var(--secondary-hover);
 }
 
 .loka-btn--ghost {

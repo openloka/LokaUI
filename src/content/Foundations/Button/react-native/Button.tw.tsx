@@ -11,7 +11,7 @@ interface ButtonProps {
 
 const variantClasses: Record<string, { pressable: string; text: string }> = {
   primary: { pressable: 'bg-accent', text: 'text-white' },
-  secondary: { pressable: 'bg-transparent border border-border', text: 'text-text-primary' },
+  secondary: { pressable: 'bg-secondary', text: 'text-secondary-text' },
   ghost: { pressable: 'bg-transparent', text: 'text-text-primary' },
 }
 
