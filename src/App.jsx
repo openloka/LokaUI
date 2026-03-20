@@ -1,6 +1,7 @@
 import { lazy, Suspense, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Providers from './components/layout/Providers'
+import Header from './components/Header'
 
 const LandingPage = lazy(() => import('./pages/LandingPage'))
 const SidebarLayout = lazy(() => import('./components/layout/SidebarLayout'))
@@ -37,6 +38,7 @@ function ScrollAnimator({ children }) {
 function AppRoutes() {
   return (
     <ScrollAnimator>
+      <Header />
       <Suspense fallback={<div className="min-h-screen bg-bg" />}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
