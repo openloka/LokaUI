@@ -12,98 +12,60 @@ export default function Hero() {
   }
 
   return (
-    <section style={{
-      position: 'relative',
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '120px clamp(16px, 4vw, 48px) 80px',
-      textAlign: 'center',
-      overflow: 'hidden',
-    }}>
+    <section
+      className="relative min-h-screen flex flex-col items-center justify-center text-center overflow-hidden"
+      style={{ padding: '120px clamp(16px, 4vw, 48px) 80px' }}
+    >
       {/* Ambient glow orbs */}
-      <div style={{
-        position: 'absolute',
-        top: '10%',
-        left: '20%',
-        width: 500,
-        height: 500,
-        borderRadius: '50%',
-        background: 'radial-gradient(circle, var(--glow) 0%, transparent 70%)',
-        animation: 'loka-glow 4s ease-in-out infinite',
-        pointerEvents: 'none',
-      }} />
-      <div style={{
-        position: 'absolute',
-        top: '30%',
-        right: '15%',
-        width: 400,
-        height: 400,
-        borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(14,165,142,0.04) 0%, transparent 70%)',
-        animation: 'loka-glow 5s ease-in-out infinite 1s',
-        pointerEvents: 'none',
-      }} />
+      <div
+        className="absolute top-[10%] left-[20%] w-125 h-125 rounded-full pointer-events-none animate-glow"
+        style={{ background: 'radial-gradient(circle, var(--glow) 0%, transparent 70%)' }}
+      />
+      <div
+        className="absolute top-[30%] right-[15%] w-100 h-100 rounded-full pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, rgba(14,165,142,0.04) 0%, transparent 70%)',
+          animation: 'loka-glow 5s ease-in-out infinite 1s',
+        }}
+      />
 
       {/* Announcement badge */}
-      <div data-anim style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: 8,
-        padding: '6px 16px',
-        borderRadius: 50,
-        background: 'var(--accent-muted)',
-        border: '1px solid var(--border-accent)',
-        fontSize: 12,
-        fontWeight: 600,
-        color: 'var(--accent)',
-        marginBottom: 32,
-        fontFamily: "'IBM Plex Mono', monospace",
-      }}>
-        <span style={{
-          background: 'var(--accent)',
-          color: 'var(--accent-text)',
-          padding: '1px 6px',
-          borderRadius: 4,
-          fontSize: 10,
-          fontWeight: 700,
-          letterSpacing: '0.5px',
-        }}>NEW</span>
+      <div
+        data-anim
+        className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-muted border border-border-accent text-xs font-semibold text-accent mb-8 font-mono"
+      >
+        <span className="bg-accent text-accent-text px-1.5 py-px rounded text-[10px] font-bold tracking-wide">
+          NEW
+        </span>
         50+ components now available
       </div>
 
       {/* Headline */}
-      <h1 data-anim data-delay="0.1" style={{
-        fontFamily: "'Fraunces', serif",
-        fontSize: 'clamp(42px, 6.5vw, 78px)',
-        fontWeight: 900,
-        letterSpacing: '-2px',
-        lineHeight: 1.05,
-        maxWidth: 800,
-        marginBottom: 24,
-      }}>
+      <h1
+        data-anim
+        data-delay="0.1"
+        className="font-pixel font-black tracking-tight leading-[1.05] max-w-200 mb-6"
+        style={{ fontSize: 'clamp(42px, 6.5vw, 78px)', letterSpacing: '-2px' }}
+      >
         Components that feel{' '}
-        <span style={{
-          background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-        }}>alive</span>
+        <span
+          className="bg-clip-text"
+          style={{
+            background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}
+        >
+          alive
+        </span>
         , built for{' '}
-        <span style={{ position: 'relative', display: 'inline-block' }}>
-          <em style={{ fontStyle: 'italic' }}>real apps</em>
+        <span className="relative inline-block">
+          <em className="italic">real apps</em>
           <svg
             viewBox="0 0 200 12"
             preserveAspectRatio="none"
-            style={{
-              position: 'absolute',
-              bottom: -4,
-              left: 0,
-              width: '100%',
-              height: 10,
-            }}
+            className="absolute -bottom-1 left-0 w-full h-2.5"
           >
             <path
               d="M2 8 Q50 2 100 6 Q150 10 198 4"
@@ -117,97 +79,49 @@ export default function Hero() {
       </h1>
 
       {/* Subtitle */}
-      <p data-anim data-delay="0.2" style={{
-        fontSize: 18,
-        fontWeight: 400,
-        lineHeight: 1.7,
-        color: 'var(--text-secondary)',
-        maxWidth: 560,
-        marginBottom: 40,
-      }}>
+      <p
+        data-anim
+        data-delay="0.2"
+        className="text-lg font-normal leading-relaxed text-text-secondary max-w-140 mb-10"
+      >
         A modern, accessible, themeable React UI design system.
         Dark-first. Copy & paste. No lock-in. Just beautiful components.
       </p>
 
       {/* CTA buttons */}
-      <div data-anim data-delay="0.3" style={{
-        display: 'flex',
-        gap: 14,
-        marginBottom: 32,
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-      }}>
+      <div
+        data-anim
+        data-delay="0.3"
+        className="flex gap-3.5 mb-8 flex-wrap justify-center"
+      >
         <button
+          className="text-sm font-semibold px-7 py-3 rounded-xl text-accent-text active:scale-[0.96] transition-all"
           style={{
-            fontSize: 14,
-            fontWeight: 600,
-            padding: '12px 28px',
-            borderRadius: 12,
             background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))',
-            color: 'var(--accent-text)',
-            transition: 'transform 0.2s ease, box-shadow 0.2s ease',
             boxShadow: '0 4px 20px rgba(14,165,142,0.25)',
           }}
-          onMouseDown={e => e.target.style.transform = 'scale(0.96)'}
-          onMouseUp={e => e.target.style.transform = 'scale(1)'}
         >
           Browse components
         </button>
-        <button
-          style={{
-            fontSize: 14,
-            fontWeight: 600,
-            padding: '12px 28px',
-            borderRadius: 12,
-            background: 'transparent',
-            color: 'var(--text-primary)',
-            border: '1px solid var(--border)',
-            transition: 'transform 0.2s ease, border-color 0.2s ease, background 0.2s ease',
-          }}
-          onMouseEnter={e => {
-            e.target.style.borderColor = 'var(--border-hover)'
-            e.target.style.background = 'var(--bg-elevated)'
-          }}
-          onMouseLeave={e => {
-            e.target.style.borderColor = 'var(--border)'
-            e.target.style.background = 'transparent'
-          }}
-          onMouseDown={e => e.target.style.transform = 'scale(0.96)'}
-          onMouseUp={e => e.target.style.transform = 'scale(1)'}
-        >
+        <button className="text-sm font-semibold px-7 py-3 rounded-xl bg-transparent text-text-primary border border-border hover:border-border-hover hover:bg-bg-elevated active:scale-[0.96] transition-all">
           Documentation
         </button>
       </div>
 
       {/* CLI snippet */}
-      <div data-anim data-delay="0.4" style={{
-        display: 'flex',
-        alignItems: 'center',
-        gap: 12,
-        padding: '10px 12px 10px 18px',
-        borderRadius: 12,
-        background: 'var(--code-bg)',
-        border: '1px solid var(--border)',
-        fontFamily: "'IBM Plex Mono', monospace",
-        fontSize: 13,
-        color: 'var(--text-secondary)',
-      }}>
-        <span style={{ color: 'var(--text-tertiary)', userSelect: 'none' }}>$</span>
+      <div
+        data-anim
+        data-delay="0.4"
+        className="flex items-center gap-3 py-2.5 pl-4.5 pr-3 rounded-xl bg-code-bg border border-border font-mono text-[13px] text-text-secondary"
+      >
+        <span className="text-text-tertiary select-none">$</span>
         <code>{cliCommand}</code>
         <button
           onClick={handleCopy}
           aria-label="Copy CLI command"
-          style={{
-            padding: '4px 10px',
-            borderRadius: 6,
-            background: 'var(--bg-hover)',
-            color: copied ? 'var(--accent)' : 'var(--text-tertiary)',
-            fontSize: 11,
-            fontWeight: 600,
-            fontFamily: "'IBM Plex Mono', monospace",
-            transition: 'color 0.2s ease',
-            border: '1px solid var(--border)',
-          }}
+          className={`px-2.5 py-1 rounded-md bg-bg-hover text-[11px] font-semibold font-mono border border-border transition-colors ${
+            copied ? 'text-accent' : 'text-text-tertiary'
+          }`}
         >
           {copied ? 'Copied!' : 'Copy'}
         </button>
