@@ -1,0 +1,42 @@
+# LokaUI
+> An open source collection of high quality, accessible, and fully customizable UI components.
+
+## Installation
+npx shadcn@latest add @lokaui/<component-name>
+
+## Available Components (24)
+- Button: https://lokaui.dev/foundations/button
+- Input: https://lokaui.dev/foundations/input
+- Badge: https://lokaui.dev/foundations/badge
+- Toggle: https://lokaui.dev/foundations/toggle
+- Dialog: https://lokaui.dev/overlays/dialog
+- Drawer: https://lokaui.dev/overlays/drawer
+- Tooltip: https://lokaui.dev/overlays/tooltip
+- Popover: https://lokaui.dev/overlays/popover
+- Table: https://lokaui.dev/data-display/table
+- Card: https://lokaui.dev/data-display/card
+- Avatar: https://lokaui.dev/data-display/avatar
+- Progress: https://lokaui.dev/data-display/progress
+- Tabs: https://lokaui.dev/navigation/tabs
+- Breadcrumb: https://lokaui.dev/navigation/breadcrumb
+- Sidebar: https://lokaui.dev/navigation/sidebar
+- Pagination: https://lokaui.dev/navigation/pagination
+- Select: https://lokaui.dev/forms/select
+- Checkbox: https://lokaui.dev/forms/checkbox
+- Radio: https://lokaui.dev/forms/radio
+- Textarea: https://lokaui.dev/forms/textarea
+- Toast: https://lokaui.dev/feedback/toast
+- Alert: https://lokaui.dev/feedback/alert
+- Skeleton: https://lokaui.dev/feedback/skeleton
+- Spinner: https://lokaui.dev/feedback/spinner
+
+## Variants
+Each component supports multiple variants:
+- React: JS-CSS, JS-TW, TS-CSS, TS-TW
+- Laravel: HTML-TW (Button only, more coming)
+- React Native: RN-TW, RN-StyleSheet (Button only, more coming)
+
+## Links
+- Website: https://lokaui.dev
+- GitHub: https://github.com/lokaui/lokaui
+- Documentation: https://lokaui.dev/docs/getting-started
