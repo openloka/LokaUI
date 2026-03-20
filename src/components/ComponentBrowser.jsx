@@ -41,84 +41,40 @@ const components = [
 
 const categories = ['All', 'Foundations', 'Overlays', 'Data Display', 'Navigation', 'Forms', 'Feedback']
 
-const statusStyles = {
-  Stable: { bg: 'var(--green-muted)', color: 'var(--green)' },
-  New: { bg: 'var(--amber-muted)', color: 'var(--amber)' },
-  Beta: { bg: 'var(--purple-muted)', color: 'var(--purple)' },
+const statusClasses = {
+  Stable: 'bg-status-green-muted text-status-green',
+  New: 'bg-status-amber-muted text-status-amber',
+  Beta: 'bg-status-purple-muted text-status-purple',
 }
 
 function Fallback({ name }) {
   return (
-    <div style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: '100%',
-      minHeight: 80,
-      border: '1.5px dashed var(--border)',
-      borderRadius: 8,
-      fontFamily: "'IBM Plex Mono', monospace",
-      fontSize: 12,
-      color: 'var(--text-muted)',
-    }}>
+    <div className="flex items-center justify-center h-full min-h-20 border-[1.5px] border-dashed border-border rounded-lg font-mono text-xs text-text-muted">
       {'<'}{name}{' />'}
     </div>
   )
 }
 
 function ComponentCard({ comp }) {
-  const [hovered, setHovered] = useState(false)
-  const st = statusStyles[comp.status]
+  const cls = statusClasses[comp.status]
 
   return (
-    <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        borderRadius: 14,
-        border: `1px solid ${hovered ? 'var(--border-accent)' : 'var(--border)'}`,
-        background: hovered ? 'var(--bg-elevated)' : 'var(--bg-card)',
-        overflow: 'hidden',
-        transition: 'border-color 0.3s ease, background 0.3s ease',
-      }}
-    >
+    <div className="rounded-[14px] border border-border bg-bg-card overflow-hidden transition-colors duration-300 hover:border-border-accent hover:bg-bg-elevated">
       {/* Preview area */}
-      <div style={{
-        padding: 20,
-        minHeight: 110,
-        display: 'flex',
-        alignItems: 'center',
-      }}>
-        <div style={{ width: '100%' }}>
+      <div className="p-5 min-h-27.5 flex items-center">
+        <div className="w-full">
           {comp.Preview ? <comp.Preview /> : <Fallback name={comp.name} />}
         </div>
       </div>
 
       {/* Footer */}
-      <div style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '10px 16px',
-        borderTop: '1px solid var(--border)',
-      }}>
-        <span style={{ fontSize: 12, fontWeight: 600 }}>{comp.name}</span>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{
-            fontSize: 10,
-            fontWeight: 600,
-            padding: '2px 7px',
-            borderRadius: 4,
-            background: st.bg,
-            color: st.color,
-            textTransform: 'uppercase',
-            letterSpacing: '0.5px',
-          }}>{comp.status}</span>
-          <span style={{
-            fontSize: 10,
-            color: 'var(--text-muted)',
-            fontFamily: "'IBM Plex Mono', monospace",
-          }}>{comp.category}</span>
+      <div className="flex items-center justify-between px-4 py-2.5 border-t border-border">
+        <span className="text-xs font-semibold">{comp.name}</span>
+        <div className="flex items-center gap-2">
+          <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded uppercase tracking-wide ${cls}`}>
+            {comp.status}
+          </span>
+          <span className="text-[10px] text-text-muted font-mono">{comp.category}</span>
         </div>
       </div>
     </div>
@@ -133,53 +89,32 @@ export default function ComponentBrowser() {
     : components.filter(c => c.category === filter)
 
   return (
-    <section id="components" style={{
-      padding: '0 clamp(16px, 4vw, 48px) 100px',
-      maxWidth: 1200,
-      margin: '0 auto',
-    }}>
-      <div data-anim style={{ marginBottom: 40 }}>
-        <h2 style={{
-          fontFamily: "'Fraunces', serif",
-          fontSize: 36,
-          fontWeight: 800,
-          letterSpacing: '-1px',
-          textAlign: 'center',
-          marginBottom: 8,
-        }}>
+    <section
+      id="components"
+      className="max-w-300 mx-auto"
+      style={{ padding: '0 clamp(16px, 4vw, 48px) 100px' }}
+    >
+      <div data-anim className="mb-10">
+        <h2 className="font-pixel text-4xl font-extrabold tracking-tight text-center mb-2">
           {filtered.length} Components
         </h2>
-        <p style={{
-          textAlign: 'center',
-          fontSize: 14,
-          color: 'var(--text-secondary)',
-          marginBottom: 32,
-        }}>Browse, preview, and copy. Every component is yours to own.</p>
+        <p className="text-center text-sm text-text-secondary mb-8">
+          Browse, preview, and copy. Every component is yours to own.
+        </p>
 
         {/* Filter pills */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: 6,
-          flexWrap: 'wrap',
-        }}>
+        <div className="flex justify-center gap-1.5 flex-wrap">
           {categories.map(cat => {
             const isActive = filter === cat
             return (
               <button
                 key={cat}
                 onClick={() => setFilter(isActive && cat !== 'All' ? 'All' : cat)}
-                style={{
-                  padding: '6px 16px',
-                  borderRadius: 8,
-                  fontSize: 12,
-                  fontWeight: 600,
-                  background: isActive ? 'var(--accent-muted)' : 'transparent',
-                  color: isActive ? 'var(--accent)' : 'var(--text-tertiary)',
-                  border: `1px solid ${isActive ? 'var(--border-accent)' : 'var(--border)'}`,
-                  transition: 'all 0.2s ease',
-                  cursor: 'pointer',
-                }}
+                className={`px-4 py-1.5 rounded-lg text-xs font-semibold border cursor-pointer transition-all ${
+                  isActive
+                    ? 'bg-accent-muted text-accent border-border-accent'
+                    : 'bg-transparent text-text-tertiary border-border hover:text-text-secondary'
+                }`}
               >
                 {cat}
               </button>
@@ -188,11 +123,7 @@ export default function ComponentBrowser() {
         </div>
       </div>
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
-        gap: 18,
-      }}>
+      <div className="grid gap-4.5" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))' }}>
         {filtered.map(comp => (
           <ComponentCard key={comp.name} comp={comp} />
         ))}
