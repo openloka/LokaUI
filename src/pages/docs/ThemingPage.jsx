@@ -1,30 +1,6 @@
-import { useState } from 'react'
-import { SunIcon, MoonIcon, ClipboardIcon, CheckIcon } from '@heroicons/react/24/outline'
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
 import { useTheme } from '../../theme'
-
-function CodeBlock({ title, code }) {
-  const [copied, setCopied] = useState(false)
-
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(code)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
-  return (
-    <div className="rounded-xl border border-border overflow-hidden mb-4">
-      <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-bg-card">
-        <span className="text-xs font-mono text-text-muted">{title}</span>
-        <button onClick={handleCopy} className="text-text-muted hover:text-text-secondary transition-colors">
-          {copied ? <CheckIcon className="w-4 h-4 text-status-green" /> : <ClipboardIcon className="w-4 h-4" />}
-        </button>
-      </div>
-      <pre className="p-4 bg-code-bg overflow-x-auto">
-        <code className="text-sm font-mono text-text-primary">{code}</code>
-      </pre>
-    </div>
-  )
-}
+import DocsCodeBlock from '../../components/common/DocsCodeBlock'
 
 function ColorSwatch({ name, variable, description }) {
   return (
@@ -72,8 +48,9 @@ export default function ThemingPage() {
         <span className="text-xs font-mono text-accent bg-accent-muted px-2 py-1 rounded">{mode}</span>
       </div>
 
-      <CodeBlock
+      <DocsCodeBlock
         title="ThemeProvider setup"
+        lang="jsx"
         code={`import { ThemeProvider } from './theme'
 
 function App() {
@@ -147,8 +124,9 @@ function MyComponent() {
         Override any token in your CSS to match your brand. The entire component library will adapt automatically:
       </p>
 
-      <CodeBlock
+      <DocsCodeBlock
         title="Custom theme override"
+        lang="css"
         code={`:root {
   /* Override the accent color */
   --accent: #6366f1;       /* Indigo */

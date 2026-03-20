@@ -1,30 +1,5 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { ClipboardIcon, CheckIcon } from '@heroicons/react/24/outline'
-
-function CodeBlock({ title, code }) {
-  const [copied, setCopied] = useState(false)
-
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(code)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
-  return (
-    <div className="rounded-xl border border-border overflow-hidden mb-4">
-      <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-bg-card">
-        <span className="text-xs font-mono text-text-muted">{title}</span>
-        <button onClick={handleCopy} className="text-text-muted hover:text-text-secondary transition-colors">
-          {copied ? <CheckIcon className="w-4 h-4 text-status-green" /> : <ClipboardIcon className="w-4 h-4" />}
-        </button>
-      </div>
-      <pre className="p-4 bg-code-bg overflow-x-auto">
-        <code className="text-sm font-mono text-text-primary">{code}</code>
-      </pre>
-    </div>
-  )
-}
+import DocsCodeBlock from '../../components/common/DocsCodeBlock'
 
 const variantData = [
   {
@@ -145,8 +120,9 @@ export default function VariantsGuidePage() {
 
       <h2 className="text-xl font-pixel text-text-primary mb-4">File Naming Convention</h2>
 
-      <CodeBlock
+      <DocsCodeBlock
         title="Component folder structure"
+        lang="bash"
         code={`src/content/Foundations/Button/
 ├── react/
 │   ├── Button.jsx          # JS-CSS

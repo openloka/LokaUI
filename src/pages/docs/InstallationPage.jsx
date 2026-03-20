@@ -1,29 +1,4 @@
-import { useState } from 'react'
-import { ClipboardIcon, CheckIcon } from '@heroicons/react/24/outline'
-
-function CodeBlock({ title, code, lang = 'bash' }) {
-  const [copied, setCopied] = useState(false)
-
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(code)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
-  return (
-    <div className="rounded-xl border border-border overflow-hidden mb-4">
-      <div className="flex items-center justify-between px-4 py-2 border-b border-border bg-bg-card">
-        <span className="text-xs font-mono text-text-muted">{title}</span>
-        <button onClick={handleCopy} className="text-text-muted hover:text-text-secondary transition-colors">
-          {copied ? <CheckIcon className="w-4 h-4 text-status-green" /> : <ClipboardIcon className="w-4 h-4" />}
-        </button>
-      </div>
-      <pre className="p-4 bg-code-bg overflow-x-auto">
-        <code className="text-sm font-mono text-text-primary">{code}</code>
-      </pre>
-    </div>
-  )
-}
+import DocsCodeBlock from '../../components/common/DocsCodeBlock'
 
 function Step({ number, title, children }) {
   return (
@@ -51,8 +26,9 @@ export default function InstallationPage() {
         <p className="text-sm text-text-secondary mb-3">
           Make sure you have a React project with Tailwind CSS configured. If you're starting fresh:
         </p>
-        <CodeBlock
+        <DocsCodeBlock
           title="Terminal"
+          lang="bash"
           code={`npm create vite@latest my-app -- --template react
 cd my-app
 npm install`}
@@ -63,20 +39,23 @@ npm install`}
         <p className="text-sm text-text-secondary mb-3">
           Install and configure Tailwind CSS v4:
         </p>
-        <CodeBlock
+        <DocsCodeBlock
           title="Terminal"
+          lang="bash"
           code={`npm install tailwindcss @tailwindcss/postcss postcss`}
         />
-        <CodeBlock
+        <DocsCodeBlock
           title="postcss.config.js"
+          lang="javascript"
           code={`export default {
   plugins: {
     '@tailwindcss/postcss': {},
   },
 }`}
         />
-        <CodeBlock
+        <DocsCodeBlock
           title="src/styles.css"
+          lang="css"
           code={`@import 'tailwindcss';`}
         />
       </Step>
@@ -85,8 +64,9 @@ npm install`}
         <p className="text-sm text-text-secondary mb-3">
           Add the LokaUI color tokens to your CSS. These CSS custom properties power all component styling:
         </p>
-        <CodeBlock
+        <DocsCodeBlock
           title="src/styles.css"
+          lang="css"
           code={`:root {
   --bg: #09090b;
   --bg-elevated: rgba(255,255,255,0.03);
@@ -109,8 +89,9 @@ npm install`}
         <p className="text-sm text-text-secondary mb-3">
           Use the shadcn CLI to add components to your project:
         </p>
-        <CodeBlock
+        <DocsCodeBlock
           title="Terminal"
+          lang="bash"
           code={`npx shadcn@latest add @lokaui/button`}
         />
         <p className="text-sm text-text-secondary mt-3">
@@ -119,8 +100,9 @@ npm install`}
       </Step>
 
       <Step number="5" title="Use the component">
-        <CodeBlock
+        <DocsCodeBlock
           title="App.jsx"
+          lang="jsx"
           code={`import Button from './components/ui/Button'
 
 export default function App() {

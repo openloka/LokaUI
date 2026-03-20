@@ -7,7 +7,7 @@ function getHighlighter() {
   if (!highlighterPromise) {
     highlighterPromise = createHighlighter({
       themes: ['one-dark-pro'],
-      langs: ['jsx', 'tsx', 'css', 'php', 'bash'],
+      langs: ['jsx', 'tsx', 'css', 'php', 'bash', 'javascript', 'json'],
     })
   }
   return highlighterPromise
