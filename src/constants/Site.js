@@ -1,0 +1,7 @@
+export const SITE = {
+  name: 'LokaUI',
+  description: 'An open source collection of high quality, accessible, and fully customizable UI components.',
+  url: 'https://lokaui.dev',
+  github: 'https://github.com/lokaui/lokaui',
+  twitter: 'https://twitter.com/lokaui',
+}
