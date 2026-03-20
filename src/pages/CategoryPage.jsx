@@ -66,14 +66,14 @@ function ComponentDocPage({ info, variants, platforms, PreviewComponent, categor
       </div>
       <p className="text-text-secondary text-sm mb-4">{info.description}</p>
       <CliInstallation componentName={info.name.toLowerCase()} platform={platform} />
-      <div className="mt-4 grid grid-cols-1 xl:grid-cols-[1fr_280px] gap-4">
-        <div className="min-w-0">
-          <CodeExample usage={info.usage || {}} platforms={platforms} platform={platform} onPlatformChange={setPlatform} preview={PreviewComponent} componentProps={currentProps} onResetProps={resetProps} />
-        </div>
-        <div className="space-y-4">
-          <PropsPlayground propDefs={info.props} currentProps={currentProps} onUpdate={updateProp} />
-          <PropTable propDefs={info.props} />
-        </div>
+      <div className="mt-4">
+        <CodeExample usage={info.usage || {}} platforms={platforms} platform={platform} onPlatformChange={setPlatform} preview={PreviewComponent} componentProps={currentProps} onResetProps={resetProps} />
+      </div>
+      <div className="mt-4">
+        <PropsPlayground propDefs={info.props} currentProps={currentProps} onUpdate={updateProp} />
+      </div>
+      <div className="mt-4">
+        <PropTable propDefs={info.props} />
       </div>
     </div>
   )
