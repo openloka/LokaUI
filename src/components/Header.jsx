@@ -53,8 +53,8 @@ function Logo() {
 const navLinks = [
   { label: "Docs", to: "/docs/getting-started" },
   { label: "Components", to: "/foundations/button" },
-  { label: "Blocks", to: "#blocks" },
-  { label: "Themes", to: "#themes" },
+  { label: "Theming", to: "/docs/theming" },
+  { label: "Variants", to: "/docs/variants" },
 ];
 
 export default function Header() {

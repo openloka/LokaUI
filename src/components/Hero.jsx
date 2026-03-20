@@ -94,7 +94,8 @@ export default function Hero() {
         data-delay="0.3"
         className="flex gap-3.5 mb-8 flex-wrap justify-center"
       >
-        <button
+        <a
+          href="/foundations/button"
           className="text-sm font-semibold px-7 py-3 rounded-xl text-accent-text active:scale-[0.96] transition-all"
           style={{
             background: 'linear-gradient(135deg, var(--accent), var(--accent-hover))',
@@ -102,10 +103,10 @@ export default function Hero() {
           }}
         >
           Browse components
-        </button>
-        <button className="text-sm font-semibold px-7 py-3 rounded-xl bg-transparent text-text-primary border border-border hover:border-border-hover hover:bg-bg-elevated active:scale-[0.96] transition-all">
+        </a>
+        <a href="/docs/getting-started" className="text-sm font-semibold px-7 py-3 rounded-xl bg-transparent text-text-primary border border-border hover:border-border-hover hover:bg-bg-elevated active:scale-[0.96] transition-all">
           Documentation
-        </button>
+        </a>
       </div>
 
       {/* CLI snippet */}
