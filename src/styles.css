@@ -1,5 +1,54 @@
 @import 'tailwindcss';
 
+@theme {
+  --font-pixel: "GeistPixel", monospace;
+  --font-sans: "Geist", "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Fira Code", monospace;
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-muted: var(--accent-muted);
+  --color-accent-text: var(--accent-text);
+
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-hover: var(--bg-hover);
+  --color-bg-card: var(--bg-card);
+  --color-bg-input: var(--bg-input);
+  --color-bg-overlay: var(--bg-overlay);
+
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
+  --color-border-accent: var(--border-accent);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-muted: var(--text-muted);
+
+  --color-status-green: var(--green);
+  --color-status-green-muted: var(--green-muted);
+  --color-status-amber: var(--amber);
+  --color-status-amber-muted: var(--amber-muted);
+  --color-status-red: var(--red);
+  --color-status-red-muted: var(--red-muted);
+  --color-status-blue: var(--blue);
+  --color-status-blue-muted: var(--blue-muted);
+  --color-status-purple: var(--purple);
+  --color-status-purple-muted: var(--purple-muted);
+
+  --color-shadow: var(--shadow);
+  --color-glow: var(--glow);
+  --color-toggle-bg: var(--toggle-bg);
+  --color-toggle-knob: var(--toggle-knob);
+  --color-code-bg: var(--code-bg);
+
+  --animate-spin-slow: loka-spin 1s linear infinite;
+  --animate-marquee: loka-marquee 30s linear infinite;
+  --animate-glow: loka-glow 4s ease-in-out infinite;
+  --animate-float: loka-float 3s ease-in-out infinite;
+}
+
 /* GeistPixel font - download woff2 from Vercel's release and place at public/fonts/GeistPixel.woff2 */
 @font-face {
   font-family: 'GeistPixel';
@@ -20,7 +69,7 @@ body {
 }
 
 ::selection {
-  background: rgba(14, 165, 142, 0.3);
+  background: var(--accent-muted);
 }
 
 ::-webkit-scrollbar {
@@ -32,7 +81,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(14, 165, 142, 0.3);
+  background: var(--accent-muted);
   border-radius: 3px;
 }
 
@@ -54,21 +103,4 @@ body {
 @keyframes loka-float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-family: inherit;
-  color: inherit;
-}
-
-input, textarea, select {
-  font-family: inherit;
 }

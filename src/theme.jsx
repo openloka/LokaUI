@@ -84,7 +84,7 @@ export function ThemeProvider({ children }) {
         background: 'var(--bg)',
         color: 'var(--text-primary)',
         minHeight: '100vh',
-        fontFamily: "'Outfit', sans-serif",
+        fontFamily: '"Geist", "Inter", system-ui, sans-serif',
         transition: 'background 0.4s ease, color 0.4s ease',
       }}>
         {children}
