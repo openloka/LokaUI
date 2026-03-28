@@ -163,7 +163,14 @@
             "laravel/dialog.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Dialog.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Dialog.stylesheet.tsx"
+          ]
+        }
       }
     },
     "drawer": {
@@ -190,7 +197,14 @@
             "laravel/drawer.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Drawer.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Drawer.stylesheet.tsx"
+          ]
+        }
       }
     },
     "popover": {
@@ -217,7 +231,14 @@
             "laravel/popover.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Popover.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Popover.stylesheet.tsx"
+          ]
+        }
       }
     },
     "tooltip": {
@@ -244,7 +265,14 @@
             "laravel/tooltip.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Tooltip.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Tooltip.stylesheet.tsx"
+          ]
+        }
       }
     },
     "avatar": {
