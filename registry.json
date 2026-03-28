@@ -158,7 +158,11 @@
             "react/Dialog.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/dialog.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -181,7 +185,11 @@
             "react/Drawer.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/drawer.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -204,7 +212,11 @@
             "react/Popover.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/popover.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -227,7 +239,11 @@
             "react/Tooltip.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/tooltip.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
