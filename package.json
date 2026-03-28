@@ -1,6 +1,6 @@
 {
   "name": "loka-ui",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "description": "An open source collection of beautiful, accessible, and fully customizable UI components for React, Laravel, and React Native.",
   "author": "LokaUI",
