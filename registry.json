@@ -376,8 +376,7 @@
         },
         "laravel": {
           "HTML-TW": [
-            "laravel/breadcrumb.blade.php",
-            "laravel/breadcrumb-item.blade.php"
+            "laravel/breadcrumb.blade.php"
           ]
         },
         "react-native": null
@@ -431,9 +430,7 @@
         },
         "laravel": {
           "HTML-TW": [
-            "laravel/sidebar.blade.php",
-            "laravel/sidebar-group.blade.php",
-            "laravel/sidebar-item.blade.php"
+            "laravel/sidebar.blade.php"
           ]
         },
         "react-native": null
@@ -460,10 +457,7 @@
         },
         "laravel": {
           "HTML-TW": [
-            "laravel/tabs.blade.php",
-            "laravel/tabs-list.blade.php",
-            "laravel/tabs-trigger.blade.php",
-            "laravel/tabs-content.blade.php"
+            "laravel/tabs.blade.php"
           ]
         },
         "react-native": null
@@ -596,7 +590,11 @@
             "react/Alert.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/alert.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -619,7 +617,11 @@
             "react/Skeleton.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/skeleton.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -642,7 +644,11 @@
             "react/Spinner.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/spinner.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -665,7 +671,11 @@
             "react/Toast.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/toast.blade.php"
+          ]
+        },
         "react-native": null
       }
     }
