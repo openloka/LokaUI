@@ -20,7 +20,11 @@
             "react/Badge.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/badge.blade.php"
+          ]
+        },
         "react-native": {
           "RN-TW": [
             "react-native/Badge.tw.tsx"
@@ -86,7 +90,11 @@
             "react/Input.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/input.blade.php"
+          ]
+        },
         "react-native": {
           "RN-TW": [
             "react-native/Input.tw.tsx"
@@ -116,7 +124,11 @@
             "react/Toggle.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/toggle.blade.php"
+          ]
+        },
         "react-native": {
           "RN-TW": [
             "react-native/Toggle.tw.tsx"
