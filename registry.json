@@ -271,7 +271,14 @@
             "laravel/avatar.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Avatar.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Avatar.stylesheet.tsx"
+          ]
+        }
       }
     },
     "card": {
@@ -298,7 +305,14 @@
             "laravel/card.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Card.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Card.stylesheet.tsx"
+          ]
+        }
       }
     },
     "progress": {
@@ -325,7 +339,14 @@
             "laravel/progress.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Progress.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Progress.stylesheet.tsx"
+          ]
+        }
       }
     },
     "table": {
@@ -623,7 +644,14 @@
             "laravel/alert.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Alert.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Alert.stylesheet.tsx"
+          ]
+        }
       }
     },
     "skeleton": {
@@ -677,7 +705,14 @@
             "laravel/spinner.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Spinner.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Spinner.stylesheet.tsx"
+          ]
+        }
       }
     },
     "toast": {
@@ -704,7 +739,14 @@
             "laravel/toast.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Toast.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Toast.stylesheet.tsx"
+          ]
+        }
       }
     }
   },
