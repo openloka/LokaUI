@@ -3,11 +3,12 @@ export const variants = {
   'JS-TW':   () => import('./react/Card.tw.jsx?raw'),
   'TS-CSS':  () => import('./react/Card.tsx?raw'),
   'TS-TW':   () => import('./react/Card.tw.tsx?raw'),
+  'HTML-TW': () => import('./laravel/card.blade.php?raw'),
 }
 
 export const platforms = {
   react:          ['JS-CSS', 'JS-TW', 'TS-CSS', 'TS-TW'],
-  laravel:        null,
+  laravel:        ['HTML-TW'],
   'react-native': null,
 }
 

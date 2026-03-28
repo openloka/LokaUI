@@ -266,7 +266,11 @@
             "react/Avatar.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/avatar.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -289,7 +293,11 @@
             "react/Card.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/card.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -312,7 +320,11 @@
             "react/Progress.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/progress.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -335,7 +347,11 @@
             "react/Table.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/table.blade.php"
+          ]
+        },
         "react-native": null
       }
     },

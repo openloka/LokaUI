@@ -3,11 +3,12 @@ export const variants = {
   'JS-TW':   () => import('./react/Table.tw.jsx?raw'),
   'TS-CSS':  () => import('./react/Table.tsx?raw'),
   'TS-TW':   () => import('./react/Table.tw.tsx?raw'),
+  'HTML-TW': () => import('./laravel/table.blade.php?raw'),
 }
 
 export const platforms = {
   react:          ['JS-CSS', 'JS-TW', 'TS-CSS', 'TS-TW'],
-  laravel:        null,
+  laravel:        ['HTML-TW'],
   'react-native': null,
 }
 
