@@ -374,7 +374,12 @@
             "react/Breadcrumb.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/breadcrumb.blade.php",
+            "laravel/breadcrumb-item.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -397,7 +402,11 @@
             "react/Pagination.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/pagination.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -420,7 +429,13 @@
             "react/Sidebar.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/sidebar.blade.php",
+            "laravel/sidebar-group.blade.php",
+            "laravel/sidebar-item.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -443,7 +458,14 @@
             "react/Tabs.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/tabs.blade.php",
+            "laravel/tabs-list.blade.php",
+            "laravel/tabs-trigger.blade.php",
+            "laravel/tabs-content.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
