@@ -21,7 +21,14 @@
           ]
         },
         "laravel": null,
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Badge.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Badge.stylesheet.tsx"
+          ]
+        }
       }
     },
     "button": {
@@ -80,7 +87,14 @@
           ]
         },
         "laravel": null,
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Input.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Input.stylesheet.tsx"
+          ]
+        }
       }
     },
     "toggle": {
@@ -103,7 +117,14 @@
           ]
         },
         "laravel": null,
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Toggle.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Toggle.stylesheet.tsx"
+          ]
+        }
       }
     },
     "dialog": {
