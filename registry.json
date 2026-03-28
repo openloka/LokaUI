@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "0.1.0",
   "components": {
     "badge": {
       "name": "Badge",
@@ -400,7 +400,14 @@
             "laravel/breadcrumb.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Breadcrumb.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Breadcrumb.stylesheet.tsx"
+          ]
+        }
       }
     },
     "pagination": {
@@ -427,7 +434,14 @@
             "laravel/pagination.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Pagination.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Pagination.stylesheet.tsx"
+          ]
+        }
       }
     },
     "sidebar": {
@@ -454,7 +468,14 @@
             "laravel/sidebar.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Sidebar.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Sidebar.stylesheet.tsx"
+          ]
+        }
       }
     },
     "tabs": {
@@ -481,7 +502,14 @@
             "laravel/tabs.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Tabs.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Tabs.stylesheet.tsx"
+          ]
+        }
       }
     },
     "checkbox": {
