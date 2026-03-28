@@ -3,11 +3,12 @@ export const variants = {
   'JS-TW':   () => import('./react/Checkbox.tw.jsx?raw'),
   'TS-CSS':  () => import('./react/Checkbox.tsx?raw'),
   'TS-TW':   () => import('./react/Checkbox.tw.tsx?raw'),
+  'HTML-TW': () => import('./laravel/checkbox.blade.php?raw'),
 }
 
 export const platforms = {
   react:          ['JS-CSS', 'JS-TW', 'TS-CSS', 'TS-TW'],
-  laravel:        null,
+  laravel:        ['HTML-TW'],
   'react-native': null,
 }
 

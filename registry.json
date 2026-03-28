@@ -401,7 +401,11 @@
             "react/Checkbox.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/checkbox.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -424,7 +428,11 @@
             "react/Radio.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/radio.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -447,7 +455,11 @@
             "react/Select.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/select.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
@@ -470,7 +482,11 @@
             "react/Textarea.tw.tsx"
           ]
         },
-        "laravel": null,
+        "laravel": {
+          "HTML-TW": [
+            "laravel/textarea.blade.php"
+          ]
+        },
         "react-native": null
       }
     },
