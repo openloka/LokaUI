@@ -734,7 +734,14 @@
             "laravel/skeleton.blade.php"
           ]
         },
-        "react-native": null
+        "react-native": {
+          "RN-TW": [
+            "react-native/Skeleton.tw.tsx"
+          ],
+          "RN-StyleSheet": [
+            "react-native/Skeleton.stylesheet.tsx"
+          ]
+        }
       }
     },
     "spinner": {

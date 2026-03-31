@@ -1,9 +1,10 @@
+import type { ReactNode } from 'react'
 import { View } from 'react-native'
 
 interface CardProps {
   variant?: 'default' | 'outlined' | 'elevated'
   padding?: 'sm' | 'md' | 'lg'
-  children: React.ReactNode
+  children: ReactNode
 }
 
 const variantClasses = {
